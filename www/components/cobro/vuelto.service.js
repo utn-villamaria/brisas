@@ -7,27 +7,29 @@
     vm.calcular = calcular;
 
     function calcular(vuelto, dinero_disponible, profundidad_maxima) {
-      vm.vuelto = vuelto;
+      vm.vuelto = vuelto*100;
       vm.dinero = orderByFilter(dinero_disponible, 'dinero.valor', true);
       vm.ramas = [];
       vm.soluciones = [];
       vm.profundidad_maxima = profundidad_maxima?profundidad_maxima:15;
-      calcularVuelto(0, vuelto, vm.dinero[0].dinero.valor, vm.dinero[0].cantidad, 0, 0);
+      calcularVuelto(0, vm.vuelto, vm.dinero[0].dinero.valor, vm.dinero[0].cantidad, 0, 0);
       return orderByFilter(vm.soluciones, 'length');
     }
 
     function calcularVuelto(indice, vuelto, valor_dinero, cantidad_dinero, profundidad, rama) {
+      console.log(vm.dinero);
       var valor;
       var cantidad;
       if(vm.dinero.length > indice + 1){
         valor = vm.dinero[indice + 1].dinero.valor;
         cantidad = vm.dinero[indice + 1].cantidad;
         nueva_rama = vm.ramas.push([]) - 1;
+        console.log(nueva_rama);
         vm.ramas[nueva_rama] = vm.ramas[nueva_rama].concat(vm.ramas[rama]);
         calcularVuelto(indice + 1, vuelto, valor, cantidad, profundidad+1, nueva_rama);
       }
       if(profundidad <= vm.profundidad_maxima) {
-        valor = valor_dinero;
+        valor = valor_dinero*100;
         cantidad = cantidad_dinero;
         if(cantidad > 0 && vuelto >= valor) {
           vuelto -= valor;

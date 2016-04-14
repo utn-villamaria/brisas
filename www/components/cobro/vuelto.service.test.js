@@ -1,7 +1,7 @@
 (function(){
   angular.module('brisas.logica').service('VueltoTest', VueltoTest);
 
-  function VueltoTest(Vuelto) {
+  function VueltoTest(Vuelto2) {
 
     var vm = this;
 
@@ -118,7 +118,7 @@
       pruebas.forEach(function(prueba) {
         console.log(prueba.vuelto);
         console.log(prueba.dineroDisponible);
-        var resultado = Vuelto.calcular(prueba.vuelto,prueba.dineroDisponible,30);
+        var resultado = Vuelto2.calcular(prueba.vuelto,prueba.dineroDisponible,30);
         console.log(resultado);
       })
     }
