@@ -19,7 +19,7 @@
       if (vm.solucion || profundidad > vm.profundidad_maxima) return;
       var maximoVuelto = 0;
       var opciones = [];
-      for(var i = vm.dinero.length -1; i >= indiceDinero; i--) {
+      for(var i = vm.dinero.length -1; i > indiceDinero; i--) {
         maximoVuelto = validarMaximoVuelto(i,maximoVuelto,vueltoRestante,vm.dinero[i].cantidad,opciones);
       }
       validarMaximoVuelto(indiceDinero,maximoVuelto,vueltoRestante,cantidadRestante,opciones);
