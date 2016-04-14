@@ -27,11 +27,8 @@
       // }
     ];
 
-    Caja.abrirCaja({
-      "fechaApertura": new Date(),
-      "fechaCierre": null,
-      "dinero": [
-        {
+    Caja.abrirCaja([
+      {
           "dinero": {
             "id": 10,
             "valor": 2.0,
@@ -58,13 +55,13 @@
           },
           "cantidad": 1
         }
-      ]
-    });
+    ]);
 
     vm.caja = Caja.getCajaActual();
-
-    vm.vuelto = Cobro.obtenerVuelto(vm.montoCobrar,vm.dineroRecibido,vm.caja);
-    Cobro.aplicarVuelto(vm.vuelto, vm.caja);
+    console.log(JSON.stringify(vm.caja));
+    vm.vuelto = Cobro.obtenerVuelto(vm.montoCobrar, vm.dineroRecibido, vm.caja);
+    Cobro.aplicarVuelto(vm.vuelto, vm.dineroRecibido, vm.caja);
+    console.log(JSON.stringify(vm.caja));
 
   }
 

@@ -43,10 +43,16 @@
       return cantidad;
     }
 
-    function abrirCaja(caja) {
+    function abrirCaja(dinero) {
       if (cajaAbierta()) {
         cerrarCaja();
       }
+      var caja = {
+        fechaApertura: new Date(),
+        fechaCierre: null,
+        flujo: []
+      };
+      caja.dinero = dinero;
       $localStorage.cajas.push(caja);
     }
 

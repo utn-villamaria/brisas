@@ -9,7 +9,22 @@
     vm.obtenerVuelto = obtenerVuelto;
     vm.aplicarVuelto = aplicarVuelto;
 
-    function aplicarVuelto(vuelto, caja) {
+    function aplicarVuelto(vuelto, dineroRecibido, caja) {
+      dineroRecibido.forEach(function(dinero) {
+        var presente = false;
+        caja.dinero.forEach(function(dineroCaja){
+          if(dineroCaja.dinero.id === dinero.id) {
+            dineroCaja.cantidad += 1;
+            presente = true;
+          }
+        });
+        if(!presente) {
+          caja.dinero.push({
+            cantidad: 1,
+            dinero: dinero
+          });
+        }
+      });
       vuelto.forEach(function(dinero) {
         caja.dinero.forEach(function(dineroCaja){
           if(dineroCaja.dinero.id === dinero.id) {
@@ -17,12 +32,19 @@
           }
         });
       });
+      caja.flujo.push(
+        {
+          fechaHora: new Date(),
+          vuelto: vuelto,
+          dineroRecibido: dineroRecibido
+        }
+      );
     }
 
     function obtenerVuelto(montoACobrar,dineroRecibido,caja) {
       var otraCaja = angular.copy(caja ? caja.dinero : Caja.getCajaActual().dinero);
       var dinero = agruparDinero(dineroRecibido);
-      var dineroDisponible = sumarDineroRecibido(otraCaja,dinero);
+      var dineroDisponible = sumarDineroRecibido(otraCaja, dinero);
       var recibido = montoRecibido(dinero);
       var vuelto = recibido - montoACobrar;
       var resultado = Vuelto.calcular(vuelto, dineroDisponible);
@@ -57,7 +79,7 @@
       return dineroAgrupado;
     }
 
-    function sumarDineroRecibido(caja,dineroRecibido) {
+    function sumarDineroRecibido(caja, dineroRecibido) {
       dineroRecibido.forEach(function(dinero) {
         var presente = false;
         caja.forEach(function(otroDinero) {
