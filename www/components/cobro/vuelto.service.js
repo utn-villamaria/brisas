@@ -22,16 +22,8 @@
       if(vm.dinero.length > indice + 1){
         valor = vm.dinero[indice + 1].dinero.valor;
         cantidad = vm.dinero[indice + 1].cantidad;
-        vm.ramas.push([]);
-        nueva_rama = vm.ramas.length - 1;
-        console.log(nueva_rama);
-        console.log(vm.ramas[nueva_rama]);
-        console.log(vm.ramas[rama]);
-        console.log(nueva_rama);
-        vm.ramas[nueva_rama].concat(vm.ramas[rama]);
-        console.log(nueva_rama);
-        console.log(vm.ramas[nueva_rama]);
-        console.log("----------------------------------------------");
+        nueva_rama = vm.ramas.push([]) - 1;
+        vm.ramas[nueva_rama] = vm.ramas[nueva_rama].concat(vm.ramas[rama]);
         calcularVuelto(indice + 1, vuelto, valor, cantidad, profundidad+1, nueva_rama);
       }
       if(profundidad <= vm.profundidad_maxima) {
