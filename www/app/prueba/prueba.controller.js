@@ -63,7 +63,7 @@
 
     vm.caja = Caja.getCajaActual();
 
-    Cobro.obtenerVuelto(vm.montoCobrar,vm.dineroRecibido,vm.caja);
+    vm.vuelto = Cobro.obtenerVuelto(vm.montoCobrar,vm.dineroRecibido,vm.caja);
 
   }
 

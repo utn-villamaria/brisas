@@ -12,9 +12,9 @@
       var otraCaja = angular.copy(caja ? caja.dinero : Caja.getCajaActual().dinero);
       var dinero = agruparDinero(dineroRecibido);
       var dineroDisponible = sumarDineroRecibido(otraCaja,dinero);
-      var dineroOrdenado = ordenarDinero(dineroDisponible);
-      var resultado = Vuelto.dynamic(5,[1,2,3]);
-      console.log(resultado);
+      // var dineroOrdenado = ordenarDinero(dineroDisponible);
+      var resultado = Vuelto.calcular(18, dineroDisponible);
+      return resultado.length>0?resultado[0]:false;
     }
 
     function agruparDinero(dineroRecibidos) {

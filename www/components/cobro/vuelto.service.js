@@ -1,49 +1,59 @@
 (function(){
   angular.module('brisas.logica').service('Vuelto', Vuelto);
 
-  function Vuelto() {
+  function Vuelto(orderByFilter) {
     var vm = this;
-    vm.dynamic = dynamic;
+    vm.profundidad_maxima = 15;
+    vm.calcular = calcular;
 
-    function dynamic(amount, coins) {
-      var coinReq = []; // this will store the optimal solution
-											// for all the values -- from 0 to
-											// given amount.
-  		var CC = []; // resets for every smaller problems
-  											// and minimum in it is the optimal
-  											// solution for the smaller problem.
-  		coinReq[0] = 0; // 0 coins are required to make the change for 0
-  		// now solve for all the amounts
-  		for (var amt = 1; amt <= amount; amt++) {
-  			for (var j = 0; j < coins.length; j++) {
-  				CC[j] = -1;
-  			}
-  			// Now try taking every coin one at a time and fill the solution in
-  			// the CC[]
-  			for (var j = 0; j < coins.length; j++) {
-  				if (coins[j] <= amt) { // check if coin value is less than
-  										// amount
-  					CC[j] = coinReq[amt - coins[j]] + 1; // if available,
-  																// select the
-  																// coin and add
-  																// 1 to solution
-  																// of
-  																// (amount-coin
-  					// value)
-  				}
-  			}
-  			//Now solutions for amt using all the coins is stored in CC[]
-  //			take out the minimum (optimal) and store in coinReq[amt]
-  			coinReq[amt]=-1;
-  			for(var j=1;j<coins.length;j++){
-  				if(CC[j]>0 && (coinReq[amt]==-1 || coinReq[amt]>CC[j])){
-  					coinReq[amt]=CC[j];
-  				}
-  			}
-  		}
-  		//return the optimal solution for amount
-  		return coinReq[amount];
-
+    function calcular(vuelto, dinero_disponible, profundidad_maxima) {
+      vm.vuelto = vuelto;
+      vm.dinero = orderByFilter(dinero_disponible, 'dinero.valor', true);
+      vm.ramas = [];
+      vm.soluciones = [];
+      vm.profundidad_maxima = profundidad_maxima?profundidad_maxima:15;
+      calcularVuelto(0, vuelto, vm.dinero[0].dinero.valor, vm.dinero[0].cantidad, 0, 0);
+      return orderByFilter(vm.soluciones, 'length');
     }
+
+    function calcularVuelto(indice, vuelto, valor_dinero, cantidad_dinero, profundidad, rama) {
+      var valor;
+      var cantidad;
+      if(vm.dinero.length > indice + 1){
+        valor = vm.dinero[indice + 1].dinero.valor;
+        cantidad = vm.dinero[indice + 1].cantidad;
+        vm.ramas.push([]);
+        nueva_rama = vm.ramas.length - 1;
+        console.log(nueva_rama);
+        console.log(vm.ramas[nueva_rama]);
+        console.log(vm.ramas[rama]);
+        console.log(nueva_rama);
+        vm.ramas[nueva_rama].concat(vm.ramas[rama]);
+        console.log(nueva_rama);
+        console.log(vm.ramas[nueva_rama]);
+        console.log("----------------------------------------------");
+        calcularVuelto(indice + 1, vuelto, valor, cantidad, profundidad+1, nueva_rama);
+      }
+      if(profundidad <= vm.profundidad_maxima) {
+        valor = valor_dinero;
+        cantidad = cantidad_dinero;
+        if(cantidad > 0 && vuelto >= valor) {
+          vuelto -= valor;
+          vm.ramas[rama].push(vm.dinero[indice].dinero);
+          if(vuelto === 0){
+            vm.soluciones.push(vm.ramas[rama]);
+          } else {
+            calcularVuelto(indice, vuelto, valor, cantidad-1, profundidad+1, rama);
+          }
+        } else {
+          if(vm.dinero.length > indice+1) {
+            valor = vm.dinero[indice+1].dinero.valor;
+            cantidad = vm.dinero[indice + 1].cantidad;
+            calcularVuelto(indice + 1, vuelto, valor, cantidad, profundidad+1, rama);
+          }
+        }
+      }
+    }
+
   }
 })();
