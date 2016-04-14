@@ -1,6 +1,6 @@
 (function() {
 
-  function PruebaCtrl(Cobro,Caja) {
+  function PruebaCtrl(Cobro,Caja,VueltoTest) {
 
     var vm = this;
 
@@ -62,6 +62,8 @@
     vm.vuelto = Cobro.obtenerVuelto(vm.montoCobrar, vm.dineroRecibido, vm.caja);
     Cobro.aplicarVuelto(vm.vuelto, vm.dineroRecibido, vm.caja);
     console.log(JSON.stringify(vm.caja));
+
+    VueltoTest.probar();
 
   }
 
