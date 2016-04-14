@@ -12,9 +12,18 @@
       var otraCaja = angular.copy(caja ? caja.dinero : Caja.getCajaActual().dinero);
       var dinero = agruparDinero(dineroRecibido);
       var dineroDisponible = sumarDineroRecibido(otraCaja,dinero);
-      // var dineroOrdenado = ordenarDinero(dineroDisponible);
-      var resultado = Vuelto.calcular(18, dineroDisponible);
+      var recibido = montoRecibido(dinero);
+      var vuelto = recibido - montoACobrar;
+      var resultado = Vuelto.calcular(vuelto, dineroDisponible);
       return resultado.length>0?resultado[0]:false;
+    }
+
+    function montoRecibido(dinero_disponible) {
+      var cantidad = 0.0;
+      dinero_disponible.forEach(function(dinero) {
+        cantidad += dinero.dinero.valor * dinero.cantidad;
+      });
+      return cantidad;
     }
 
     function agruparDinero(dineroRecibidos) {
