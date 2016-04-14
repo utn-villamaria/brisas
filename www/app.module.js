@@ -1,3 +1,4 @@
+(function(){
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -6,5 +7,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('brisas.pantallas', ['ionic']);
-angular.module('brisas.logica', ['ionic']);
+angular.module('brisas.logica', ['ionic','ngStorage']);
 angular.module('brisas', ['ionic', 'brisas.pantallas', 'brisas.logica']);
+
+})();

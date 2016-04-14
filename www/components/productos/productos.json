@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "descripcion": "Pan",
+    "nombre": "Pan",
+    "precio": 30.0,
+    "metodoVenta": "P"
+  },
+  {
+    "id": 1,
+    "descripcion": "Factura",
+    "nombre": "Factura",
+    "precio": 5.0,
+    "metodoVenta": "U"
+  }
+]
