@@ -13,18 +13,18 @@
         "imagen": "components/dinero/imagenes/belgrano_nuevo.jpg",
         "esMoneda": false
       },
-      {
-        "id": 7,
-        "valor": 10.0,
-        "imagen": "components/dinero/imagenes/belgrano_nuevo.jpg",
-        "esMoneda": false
-      },
-      {
-        "id": 7,
-        "valor": 10.0,
-        "imagen": "components/dinero/imagenes/belgrano_nuevo.jpg",
-        "esMoneda": false
-      }
+      // {
+      //   "id": 7,
+      //   "valor": 10.0,
+      //   "imagen": "components/dinero/imagenes/belgrano_nuevo.jpg",
+      //   "esMoneda": false
+      // },
+      // {
+      //   "id": 7,
+      //   "valor": 10.0,
+      //   "imagen": "components/dinero/imagenes/belgrano_nuevo.jpg",
+      //   "esMoneda": false
+      // }
     ];
 
     Caja.abrirCaja({
@@ -64,6 +64,7 @@
     vm.caja = Caja.getCajaActual();
 
     vm.vuelto = Cobro.obtenerVuelto(vm.montoCobrar,vm.dineroRecibido,vm.caja);
+    Cobro.aplicarVuelto(vm.vuelto, vm.caja);
 
   }
 

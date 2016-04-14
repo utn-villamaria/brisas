@@ -7,6 +7,17 @@
     var vm = this;
 
     vm.obtenerVuelto = obtenerVuelto;
+    vm.aplicarVuelto = aplicarVuelto;
+
+    function aplicarVuelto(vuelto, caja) {
+      vuelto.forEach(function(dinero) {
+        caja.dinero.forEach(function(dineroCaja){
+          if(dineroCaja.dinero.id === dinero.id) {
+            dineroCaja.cantidad -= 1;
+          }
+        });
+      });
+    }
 
     function obtenerVuelto(montoACobrar,dineroRecibido,caja) {
       var otraCaja = angular.copy(caja ? caja.dinero : Caja.getCajaActual().dinero);
@@ -66,30 +77,6 @@
       return orderByFilter(dineroDisponible,'dinero.valor',true);
     }
 
-    function calcularVuelto(dineroDisponible, vuelto) {
-    //   var vueltoRestante = vuelto;
-    //   var dineroDisponibleCopy = angular.copy(dineroDisponible);
-    //   var contar = 1;
-    //   while( vueltoRestante > 0 && dineroDisponible.length > 0) {
-    //     var vueltoRestante = vuelto;
-    //     dineroDisponibleCopy.forEach(function(dinero) {
-    //       var continuar = true;
-    //       while(continuar){
-    //         if(dinero.cantidad > 0 && dinero.dinero.valor < vueltoRestante) {
-    //           dinero.cantidad--;
-    //           vueltoRestante -= dinero.dinero.valor;
-    //         } else {
-    //           continuar = false;
-    //         }
-    //       }
-    //     });
-    //     dineroDisponibleCopy = dineroDisponible.splice(contar, 1);
-    //     contar++;
-    //   }
-    // }
-    // if(vueltoRestante > 0) {
-    //   console.log("No se puede entregar vuelto");
-    }
   }
 
 })();
