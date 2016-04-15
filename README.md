@@ -16,9 +16,11 @@ Teléfono: 54 3537 469975 / 15-554228 / 15-516573
 
 Email: bdecambio@yahoo.com.ar
 
-## Primer Hackathon Solidario de la [Universidad Tecnológica Nacional Facultad Regional Villa María](www.frvm.utn.edu.ar)
+## Primer Hackathon Solidario de la [Universidad Tecnológica Nacional Facultad Regional Villa María](http://www.frvm.utn.edu.ar)
 Un hackathon, es un término usado para referirse a un encuentro de programadores cuyo objetivo es el desarrollo colaborativo de software.
 
 El término integra los conceptos de maratón y hacker, aludiendo a una experiencia colectiva que persigue la meta común de desarrollar aplicaciones de forma colaborativa en un lapso corto.
 
 La particularidad de éste hackathon es que durante 15 días se realizaron diferentes actividades en las distintas asignaturas que integran la [Carrera de Ingeniería en Sistemas de Información](http://www.sistemas.frvm.utn.edu.ar). Estas actividades fueron divididas de acuerdo a las aptitudes adquiridas por los alumnos de acuerdo a su grado de avance en la carrera.
+
+Además se contó con la colaboración de los docentes de la facultad en actividades de desarrollo y colaboración.
