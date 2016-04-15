@@ -1,0 +1,13 @@
+.Oncenormal{
+    font-family: "Lucida Sans Typewriter";
+    font-size: 25px !important;
+    font-style: normal ;
+    font-weight: normal;
+}
+
+.normal{
+    font-family: "Lucida Sans Typewriter";
+    font-size: 25px;
+    font-style: normal ;
+    font-weight: normal;
+}

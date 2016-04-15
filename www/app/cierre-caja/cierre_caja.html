@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="estiloNieto.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app.module.js"></script>
+</head>
+<body ng-app="brisas"> <ion-pane>
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">CIERRE DE CAJA</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                Total Ingreso Caja
+            </div>
+            <div class="item item-text-wrap">
+                <i class="ion-social-usd"></i>
+            </div>
+        </div>
+
+    </ion-content>
+
+        <ion-footer-bar class="bar-balanced">
+
+                <div  class="button-bar ">
+
+                    <button class="button ion-calculator item-icon-right button-positive Oncenormal "> Calcular Caja</button>
+
+                    <button class="button ion-android-done item-icon-right button-balanced Oncenormal ">Confirmar</button>
+
+                </div>
+
+        </ion-footer-bar>
+
+            </body>
+</html>
+
