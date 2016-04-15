@@ -6,14 +6,15 @@
     <meta http-equiv="Content-Security-Policy" content="default-src *; img-src * 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
     <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <!--<link href="lib/ionic/css/ionic.css" rel="stylesheet">-->
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above-->
+    <link href="css/ionic.app.css" rel="stylesheet">
 
     <link href="app/seleccionar-productos/seleccionar-productos.css" rel="stylesheet">
     <link href="components/dinero/dinero.css" rel="stylesheet">
-
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
+    <link href="app/principal/principal.css" rel="stylesheet">
+    <link href="components/estilos/general.css" rel="stylesheet">
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -27,8 +28,6 @@
     <script src="app.module.js"></script>
     <script src="app/principal/principal.controller.js"></script>
     <script src="app/principal/principal.state.js"></script>
-    <script src="app/prueba/prueba.controller.js"></script>
-    <script src="app/prueba/prueba.state.js"></script>
     <script src="app/recepcion/recepcion.controller.js"></script>
     <script src="app/recepcion/recepcion.state.js"></script>
     <script src="app/seleccionar-productos/seleccionar-productos.controller.js"></script>
@@ -36,17 +35,21 @@
     <script src="app/vuelto/vuelto.controller.js"></script>
     <script src="app/vuelto/vuelto.service.js"></script>
     <script src="app/vuelto/vuelto.state.js"></script>
+    <script src="app/inicio-caja/inicio-caja-billete.state.js"></script>
+    <script src="app/inicio-caja/inicio-caja-billete.controller.js"></script>
+    <script src="app/modificar-caja/modificar-caja.state.js"></script>
+    <script src="app/modificar-caja/modificar-caja.controller.js"></script>
     <script src="components/dinero/dinero.service.js"></script>
     <script src="components/productos/productos.service.js"></script>
     <script src="components/cobro/cobro.service.js"></script>
     <script src="components/cobro/cobro-actual.service.js"></script>
     <script src="components/cobro/vuelto.service.js"></script>
-    <script src="components/cobro/vuelto2.service.js"></script>
     <script src="components/cobro/multiplos-dinero.service.js"></script>
     <script src="components/caja/caja.service.js"></script>
     <script src="components/imagenes/imagenes.service.js"></script>
     <script src="components/cobro/vuelto.service.test.js"></script>
     <script src="config/app.config.js"></script>
+    <script src="config/app.run.js"></script>
 
   <body ng-app="brisas">
     <ion-nav-view></ion-nav-view>

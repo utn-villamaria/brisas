@@ -1,7 +1,7 @@
-<ion-header-bar class="bar-positive col-50">
+<ion-header-bar align-title="center" class="bar-positive col-50 barra-arriba">
   <h1 class="title">Productos</h1>
 </ion-header-bar>
-<ion-header-bar class="bar-balanced col-50 col-offset-50">
+<ion-header-bar align-title="center" class="bar-balanced col-50 col-offset-50">
   <h1 class="title">Productos Seleccionados</h1>
 </ion-header-bar>
 <ion-view>
@@ -10,14 +10,14 @@
       <ion-content class="col-50 text-center">
         <span ng-repeat="producto in vm.productos">
             <button type="button"  ng-click="vm.agregarProducto(producto)">
-              <img class="img-responsive" ng-src="{{producto.imagen}}" alt="" width="256"/>
+              <img class="img-responsive" ng-src="{{producto.imagen}}" alt="" width="200"/>
             </button>
           </span>
       </ion-content>
       <ion-content class="col-offset-50 col-50 text-center">
         <span ng-repeat="item in vm.seleccionados track by $index">
             <button type="button" ng-click="vm.quitarSeleccionado($index)">
-              <img class="img-responsive" src="{{item.producto.imagen}}" width="256">
+              <img class="img-responsive" ng-src="{{item.producto.imagen}}" width="200">
             </button>
           </span>
       </ion-content>
@@ -26,5 +26,5 @@
 </ion-view>
 <ion-footer-bar class="bar-positive" align-title="center">
   <h1 class="title">Total = {{vm.calcularTotal() | currency }}</h1>
-  <button class="button" ng-click="vm.popupConfirmarVenta()">Confirmar</button>
+  <button ng-show="vm.seleccionados.length > 0" class="button boton-grande ion-checkmark-round" ng-click="vm.popupConfirmarVenta()"></button>
 </ion-footer-bar>

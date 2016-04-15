@@ -2,14 +2,15 @@
 
   angular.module('brisas.logica').service('Cobro', Cobro);
 
-  function Cobro(orderByFilter, Caja, Vuelto) {
+  function Cobro(orderByFilter, filterFilter, Caja, Vuelto) {
 
     var vm = this;
 
     vm.obtenerVuelto = obtenerVuelto;
     vm.aplicarVuelto = aplicarVuelto;
 
-    function aplicarVuelto(vuelto, dineroRecibido, caja) {
+    function aplicarVuelto(vuelto, dineroRecibido, productos, caja) {
+      if (!caja) caja = Caja.getCajaActual();
       if (!vuelto) return;
       dineroRecibido.forEach(function(dinero) {
         var presente = false;
@@ -40,6 +41,10 @@
           dineroRecibido: dineroRecibido
         }
       );
+      if (!caja.ventas) caja.ventas = [];
+      caja.ventas.push({
+        productos: productos
+      })
     }
 
     function obtenerVuelto(montoACobrar,dineroRecibido,caja) {
@@ -48,7 +53,13 @@
       var dineroDisponible = sumarDineroRecibido(otraCaja, dinero);
       var recibido = montoRecibido(dinero);
       var vuelto = (recibido * 100 - montoACobrar * 100) / 100;
-      var resultado = Vuelto.calcular(vuelto, dineroDisponible);
+      if (vuelto === 0) {
+        return [];
+      }
+      var dineroFiltrado = filterFilter(dineroDisponible,function(valor) {
+        return valor.cantidad > 0;
+      });
+      var resultado = Vuelto.calcular(vuelto, dineroFiltrado);
       return resultado;
     }
 

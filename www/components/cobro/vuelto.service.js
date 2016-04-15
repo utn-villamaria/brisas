@@ -7,6 +7,8 @@
     vm.optimizar = true;
     vm.calcular = calcular;
 
+
+    // TODO no anda si recibe billetes con cantidad 0.
     function calcular(vuelto, dinero_disponible, profundidad_maxima) {
       vm.solucion = null;
       vm.vuelto = vuelto*100;

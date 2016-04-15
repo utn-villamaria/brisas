@@ -1,0 +1,33 @@
+<ion-header-bar class="bar-positive">
+  <h1 class="title">Inicio Caja</h1>
+</ion-header-bar>
+<ion-view>
+    <ion-content>
+        <div class="row row-center" style="text-align:center; height:auto; width:auto; margin-left: auto; margin-right: auto;">
+            <div class="col">
+                <ion-list>
+                    <ion-item ng-repeat="elemento in vm.cajaInicial">
+                        <div class="row">
+                            <div class="col-33">
+                                <img ng-src="{{elemento.dinero.imagen}}" ng-show="elemento.dinero.esMoneda">
+                                <img ng-src="{{elemento.dinero.imagen}}" ng-hide="elemento.dinero.esMoneda" width="300px">
+                            </div>
+                            <div class="col col-center">
+                                <label class="item item-input">
+                                    <input ng-model="elemento.cantidad" type="number" placeholder=" " min="0" style="height: 80px; font-size: 60px;">
+                                </label>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<ion-footer-bar class="bar-positive">
+  <h1 class="title"></h1>
+  <div class="buttons">
+    <button class="button boton-grande ion-checkmark-round" ng-click="vm.abrirCajaInicial()"></button>
+  </div>
+</ion-footer-bar>

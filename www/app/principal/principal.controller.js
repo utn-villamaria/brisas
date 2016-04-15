@@ -4,18 +4,17 @@
 
     var vm = this;
 
-    vm.cobrar = cobrar;
+    vm.modificarCaja = modificarCaja;
 
-    vm.abrirCaja = abrirCaja;
+    vm.vender = vender;
 
-    function cobrar() {
+    function vender() {
       $state.go('seleccionar-productos');
     }
 
-    function abrirCaja() {
-      //$state.go('seleccionar-productos');
+    function modificarCaja() {
+      $state.go('modificarCaja');
     }
-
   }
 
   angular.module('brisas.logica').controller('PrincipalCtrl', PrincipalCtrl);
