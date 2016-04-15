@@ -25,6 +25,7 @@
     function calcularVuelto(dineroRecibido) {
       cobroActual.dineroRecibido = dineroRecibido;
       cobroActual.vuelto = Cobro.obtenerVuelto(cobroActual.monto,cobroActual.dineroRecibido);
+      console.log(cobroActual);
     }
 
     cobroActual = {
