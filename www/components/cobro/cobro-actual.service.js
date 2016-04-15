@@ -2,7 +2,7 @@
 
   angular.module('brisas.logica').service('CobroActual', CobroActual);
 
-  function CobroActual() {
+  function CobroActual(Cobro) {
 
     var vm = this;
 
@@ -10,15 +10,26 @@
 
     vm.set = set;
 
+    vm.calcularVuelto = calcularVuelto;
+
     var cobroActual = null;
 
     function get(nuevo) {
-      cobroActual = nuevo;
+      return cobroActual;
     }
 
     function set() {
-      return cobroActual;
+      cobroActual = nuevo;
     }
+
+    function calcularVuelto(dineroRecibido) {
+      cobroActual.dineroRecibido = dineroRecibido;
+      cobroActual.vuelto = Cobro.obtenerVuelto(cobroActual.monto,cobroActual.dineroRecibido);
+    }
+
+    cobroActual = {
+      monto: 55.8
+    };
 
   }
 
