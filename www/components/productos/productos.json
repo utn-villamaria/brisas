@@ -1,16 +1,107 @@
 [
   {
     "id": 1,
-    "descripcion": "Pan",
-    "nombre": "Pan",
-    "precio": 30.0,
-    "metodoVenta": "P"
+    "nombre": "Pepas",
+    "precio": 26.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/pepas.jpg"
   },
   {
-    "id": 1,
-    "descripcion": "Factura",
-    "nombre": "Factura",
-    "precio": 5.0,
-    "metodoVenta": "U"
+    "id": 2,
+    "nombre": "Materas",
+    "precio": 24.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/materas.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Alfajores",
+    "precio": 6.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/alfajores.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Paquete alfajor",
+    "precio": 36.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/paquete-alfajor.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Palmeritas",
+    "precio": 65.0,
+    "metodoVenta": "P",
+    "imagen": "components/productos/imagenes/palmeritas.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Bizcochos",
+    "precio": 40.0,
+    "metodoVenta": "P",
+    "imagen": "components/productos/imagenes/bizcochos.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Facturas",
+    "precio": 4.5,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/facturas.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Churrinches",
+    "precio": 35.0,
+    "metodoVenta": "P",
+    "imagen": "components/productos/imagenes/churrinches.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Roscas",
+    "precio": 36.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/roscas.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Pasta Frola Membrillo",
+    "precio": 30.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/pasta-frola-membrillo.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Pasta Frola Dulce de Leche",
+    "precio": 35.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/pasta-frola-dulce-leche.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "Budín",
+    "precio": 30.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/budin.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "Pan Dulce",
+    "precio": 43.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/pan-dulce.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "Torta Marmolada",
+    "precio": 38.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/torta-marmolada.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Tarta de Coco",
+    "precio": 35.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/torta-coco.jpg"
   }
 ]
