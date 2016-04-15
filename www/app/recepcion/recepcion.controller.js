@@ -1,4 +1,4 @@
-angular.module('brisas.pantallas', ['ionic']).controller('RecepcionController', function($scope) {
+angular.module('brisas.pantallas').controller('RecepcionController', function($scope) {
 
   var vm = this;
   vm.finDeRecepcion = function() {

@@ -1,4 +1,4 @@
-angular.module('brisas.pantallas', ['ionic']).controller('SeleccionarProductosCtrl', function() {
+angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', function() {
 
   var vm = this;
 

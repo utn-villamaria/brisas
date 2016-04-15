@@ -1,4 +1,4 @@
-angular.module('brisas.pantallas', ['ionic'])
+angular.module('brisas.pantallas')
 .controller('VueltoController',function($scope, $state,$ionicActionSheet, $timeout,VueltoService) {
   var vm=this;
   $scope.vuelto= VueltoService.getVueltoActual();
