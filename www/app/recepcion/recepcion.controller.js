@@ -38,25 +38,25 @@
           "dinero": {
             "id": 10,
             "valor": 2.0,
-            "imagen": "components/dinero/imagenes/mitre.jpg",
+            "imagen": "components/dinero/imagenes/2.jpg",
             "esMoneda": false
           },
           "cantidad": 4
         },
         {
           "dinero": {
-            "id": 9,
+            "id": 8,
             "valor": 5.0,
-            "imagen": "components/dinero/imagenes/san_martin_nuevo.jpg",
+            "imagen": "components/dinero/imagenes/5.jpg",
             "esMoneda": false
           },
           "cantidad": 15
         },
         {
           "dinero": {
-            "id": 7,
+            "id": 6,
             "valor": 10.0,
-            "imagen": "components/dinero/imagenes/belgrano_nuevo.jpg",
+            "imagen": "components/dinero/imagenes/10.jpg",
             "esMoneda": false
           },
           "cantidad": 10
@@ -65,9 +65,8 @@
           "dinero": {
             "id": 14,
             "valor": 0.25,
-            "imagen": "components/dinero/imagenes/moneda_25.jpg",
-            "esMoneda": true,
-            "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
+            "imagen": "components/dinero/imagenes/25cm.jpg",
+            "esMoneda": true
           },
           "cantidad": 10
         },
@@ -75,9 +74,8 @@
           "dinero": {
             "id": 15,
             "valor": 0.10,
-            "imagen": "components/dinero/imagenes/moneda_10.jpg",
-            "esMoneda": true,
-            "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
+            "imagen": "components/dinero/imagenes/10cm.jpg",
+            "esMoneda": true
           },
           "cantidad": 10
         }
