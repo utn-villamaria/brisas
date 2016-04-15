@@ -9,7 +9,7 @@
     vm.abrirCaja = abrirCaja;
 
     function cobrar() {
-      $state.go('seleccionar-productos');
+      $state.go('modificarCaja');
     }
 
     function abrirCaja() {
