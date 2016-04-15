@@ -24,7 +24,7 @@
     </div>
   </ion-content>
 </ion-view>
-<ion-footer-bar class="bar-positive">
+<ion-footer-bar ng-class="{'bar-assertive': !vm.isDineroSuficiente(), 'bar-balanced': vm.isDineroSuficiente() }">
   <h1 class="title"></h1>
   <div class="buttons">
     <button class="button" ng-click="vm.finDeRecepcion()">Fin de la recepción</button>
