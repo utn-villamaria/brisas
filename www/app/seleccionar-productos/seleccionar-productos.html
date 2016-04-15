@@ -1,0 +1,22 @@
+<ion-view>
+  <ion-content ng-controller="SeleccionarProductosCtrl as vm">
+    <div class="row row-top col-50">
+      <ion-scroll width="600" height="200" direction="xy">
+        <span ng-repeat="producto in vm.productos">
+          <button class="button button-light">
+            <img src="{{producto.imagen}}" alt="" class="imagen-seleccion" ng-click="vm.agregarProducto()"/>
+          </button>
+        </span>
+      </ion-scroll>
+    </div>
+    <div class="row row-center">
+      <div class="col"></div>
+      <div class="col col-50">
+        <button class="button button-full button-assertive" ng-click="finDeRecepcion()">
+          Salir
+        </button>
+      </div>
+      <div class="col"></div>
+    </div>
+  </ion-content>
+</ion-view>

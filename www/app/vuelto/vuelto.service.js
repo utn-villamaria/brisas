@@ -1,4 +1,4 @@
-angular.module('brisas.pantallas', ['ionic'])
+angular.module('brisas.pantallas')
   .service('VueltoService', function () {
     var vm = this;
     vm.vueltoActual=[];

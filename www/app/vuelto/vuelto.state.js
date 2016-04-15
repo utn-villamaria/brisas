@@ -1,4 +1,4 @@
-angular.module('brisas.pantallas', ['ionic'])
+angular.module('brisas.pantallas')
 .config(function($stateProvider) {
   $stateProvider
   .state('vuelto', {

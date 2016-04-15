@@ -48,7 +48,7 @@
       var dineroDisponible = sumarDineroRecibido(otraCaja, dinero);
       var recibido = montoRecibido(dinero);
       var vuelto = (recibido * 100 - montoACobrar * 100) / 100;
-      var resultado = Vuelto2.calcular(vuelto, dineroDisponible);
+      var resultado = Vuelto.calcular(vuelto, dineroDisponible);
       return resultado;
     }
 
