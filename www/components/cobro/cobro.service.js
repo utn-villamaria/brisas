@@ -2,7 +2,7 @@
 
   angular.module('brisas.logica').service('Cobro', Cobro);
 
-  function Cobro(orderByFilter, Caja, Vuelto2) {
+  function Cobro(orderByFilter, Caja, Vuelto) {
 
     var vm = this;
 
@@ -10,6 +10,7 @@
     vm.aplicarVuelto = aplicarVuelto;
 
     function aplicarVuelto(vuelto, dineroRecibido, caja) {
+      if (!vuelto) return;
       dineroRecibido.forEach(function(dinero) {
         var presente = false;
         caja.dinero.forEach(function(dineroCaja){

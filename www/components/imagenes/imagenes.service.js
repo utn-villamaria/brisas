@@ -2,15 +2,11 @@
 
   angular.module('brisas.logica').service('Imagenes', Imagenes);
 
-  function Imagenes($ionicPlatform, $cordovaCamera, $cordovaFile) {
+  function Imagenes($cordovaCamera, $cordovaFile) {
 
     var vm = this;
 
     vm.sacarFoto = sacarFoto;
-
-    $ionicPlatform.ready(function() {
-
-    });
 
     function sacarFoto() {
       vm.options = {
