@@ -1,7 +1,7 @@
-<ion-header-bar class="bar-positive col-50">
+<ion-header-bar align-title="center" class="bar-positive col-50">
   <h1 class="title">Productos</h1>
 </ion-header-bar>
-<ion-header-bar class="bar-balanced col-50 col-offset-50">
+<ion-header-bar align-title="center" class="bar-balanced col-50 col-offset-50">
   <h1 class="title">Productos Seleccionados</h1>
 </ion-header-bar>
 <ion-view>
@@ -26,5 +26,5 @@
 </ion-view>
 <ion-footer-bar class="bar-positive" align-title="center">
   <h1 class="title">Total = {{vm.calcularTotal() | currency }}</h1>
-  <button class="button boton-grande ion-checkmark-round" ng-click="vm.popupConfirmarVenta()"></button>
+  <button ng-show="vm.seleccionados.length > 0" class="button boton-grande ion-checkmark-round" ng-click="vm.popupConfirmarVenta()"></button>
 </ion-footer-bar>

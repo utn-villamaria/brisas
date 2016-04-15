@@ -6,3 +6,7 @@
 .boton-grande {
   font-size: 72px;
 }
+
+.bar .button, .bar button.boton-grande {
+  font-size: 60px;
+}

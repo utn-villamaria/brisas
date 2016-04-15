@@ -1,7 +1,7 @@
-<ion-header-bar class="bar-positive col-50">
+<ion-header-bar align-title="center" class="bar-positive col-50">
   <h1 class="title">Dinero Disponible</h1>
 </ion-header-bar>
-<ion-header-bar class="bar-balanced col-50 col-offset-50">
+<ion-header-bar align-title="center" class="bar-balanced col-50 col-offset-50">
   <h1 class="title">Dinero Entregado</h1>
 </ion-header-bar>
 <ion-view>
@@ -27,6 +27,6 @@
 <ion-footer-bar ng-class="{'bar-assertive': !vm.isDineroSuficiente(), 'bar-balanced': vm.isDineroSuficiente() }">
   <h1 class="title"></h1>
   <div class="buttons">
-    <button class="button" ng-click="vm.finDeRecepcion()">Fin de la recepción</button>
+    <button ng-show="vm.isDineroSuficiente()" class="button boton-grande ion-checkmark-round" ng-click="vm.finDeRecepcion()"></button>
   </div>
 </ion-footer-bar>
