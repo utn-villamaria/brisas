@@ -23,4 +23,4 @@ El término integra los conceptos de maratón y hacker, aludiendo a una experien
 
 La particularidad de éste hackathon es que durante 15 días se realizaron diferentes actividades en las distintas asignaturas que integran la [Carrera de Ingeniería en Sistemas de Información](http://www.sistemas.frvm.utn.edu.ar). Estas actividades fueron divididas de acuerdo a las aptitudes adquiridas por los alumnos de acuerdo a su grado de avance en la carrera.
 
-Además se contó con la colaboración de los docentes de la facultad en actividades de desarrollo y colaboración.
+Se contó también con la colaboración de los docentes de la facultad en actividades de desarrollo y gestión de los equipos de análisis, diseño y desarrollo del sistema de asistencia para el cobro.
