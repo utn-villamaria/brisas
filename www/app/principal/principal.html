@@ -3,19 +3,13 @@
 </ion-header-bar>
 <ion-content class="principal">
   <div class="row">
-    <button class="button button-balanced col col-25 col-offset-25 boton-alto boton-grande" ng-click="vm.cobrar()">
+    <button class="button button-balanced col col-50 col-offset-25 boton-alto boton-grande" ng-click="vm.cobrar()">
       <span class="ion-plus-round"></span>
     </button>
   </div>
-  <div class="row">
-    <button class="button button-positive col col-25 col-offset-25 boton-alto boton-grande"  ng-click="vm.cobrar()">
-      <span class="ion-social-usd"></span>
-    </button>
-    <button class="button button-assertive col col-25 boton-alto boton-grande" ng-click="vm.abrirCaja()">
-      <span class="ion-key"></span>
-    </button>
-  </div>
 </ion-content>
-<div class="bar bar-footer bar-stable">
+<ion-footer-bar align-title="center" class="bar-stable">
+  <button class="button ion-social-usd boton-grande"  ng-click="vm.cobrar()"></button>
   <div class="title">Brisas de Cambio</div>
-</div>
+  <button class="button ion-key boton-grande" ng-click="vm.popupConfirmarVenta()"></button>
+</ion-footer-bar>

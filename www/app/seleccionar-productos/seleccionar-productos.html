@@ -1,4 +1,4 @@
-<ion-header-bar align-title="center" class="bar-positive col-50">
+<ion-header-bar align-title="center" class="bar-positive col-50 barra-arriba">
   <h1 class="title">Productos</h1>
 </ion-header-bar>
 <ion-header-bar align-title="center" class="bar-balanced col-50 col-offset-50">
@@ -10,14 +10,14 @@
       <ion-content class="col-50 text-center">
         <span ng-repeat="producto in vm.productos">
             <button type="button"  ng-click="vm.agregarProducto(producto)">
-              <img class="img-responsive" ng-src="{{producto.imagen}}" alt="" width="256"/>
+              <img class="img-responsive" ng-src="{{producto.imagen}}" alt="" width="200"/>
             </button>
           </span>
       </ion-content>
       <ion-content class="col-offset-50 col-50 text-center">
         <span ng-repeat="item in vm.seleccionados track by $index">
             <button type="button" ng-click="vm.quitarSeleccionado($index)">
-              <img class="img-responsive" ng-src="{{item.producto.imagen}}" width="256">
+              <img class="img-responsive" ng-src="{{item.producto.imagen}}" width="200">
             </button>
           </span>
       </ion-content>
