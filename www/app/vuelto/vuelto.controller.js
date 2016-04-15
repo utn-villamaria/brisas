@@ -5,10 +5,10 @@ function VueltoCtrl($scope, $state,$ionicActionSheet, $timeout,CobroActual) {
 
   var vm=this;
 
-  vm.vuelto= CobroActual.get().vuelto;
-  
-  $scope.finDeVenta=function(){
-    alert("Termino venta volver a pantalla de venta nuevamente");
+  vm.vuelto = CobroActual.get().vuelto;
+  console.log(vm.vuelto);
+
+  vm.finDeVenta=function(){
     $state.go('estado de venta cambiar cuando se integre');
   };
   $scope.actualizarCaja=function(){

@@ -1,25 +1,12 @@
-<ion-content class="gallery">
-  <div class="row row-top">
-    <div class="col">
-      <div class="col">
-        <button class="button button-full button-positive" ng-click="finDeVenta()">
-          Fin de venta
-        </button>
-      </div>
-    </div>
-    <div class="col">
-      <div class="col">
-        <button class="button button-full button-assertive" ng-click="actualizarCaja()">
-          Actualizar caja
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="row row-center">
-    <ion-scroll zooming="false" direction="y" style="width: 1024px; height: 500px">
-      <span ng-repeat="dinero in vm.vuelto">
-            <img class="img-responsive" ng-src="{{dinero.imagen}}"  width="128">
-      </span>
-    </ion-scroll>
-  </div>
-</ion-content>
+<ion-view>
+  <ion-content>
+    {{vm.vuelto}}
+    <span ng-repeat="vuelto in vm.vuelto">
+      <img ng-class="{moneda:vuelto.esMoneda, billete: !vuelto.esMoneda}" class="img-responsive" src="{{vuelto.imagen}}">
+    </span>
+  </ion-content>
+</ion-view>
+<ion-footer-bar class="bar-positive">
+  <h1 class="title"></h1>
+  <button class="button" ng-click="vm.finDeVenta()">Fin de venta</button>
+</ion-footer-bar>
