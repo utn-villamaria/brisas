@@ -10,21 +10,21 @@
         <ion-content class="col-50">
           <span ng-repeat="dinero in vm.dinero">
             <button type="button" ng-click="vm.agregarDinero(dinero)">
-              <img ng-class="{moneda:dinero.esMoneda, billete: !dinero.esMoneda}" class="img-responsive" src="{{dinero.imagen}}">
+              <img ng-class="{moneda:dinero.esMoneda, billete: !dinero.esMoneda}" class="img-responsive" ng-src="{{dinero.imagen}}">
             </button>
           </span>
       </ion-content>
         <ion-content class="col-offset-50 col-50">
           <span ng-repeat="dinero in vm.seleccionados track by $index">
             <button type="button" ng-click="vm.quitarDinero($index)">
-              <img ng-class="{moneda:dinero.esMoneda, billete: !dinero.esMoneda}" class="img-responsive" src="{{dinero.imagen}}">
+              <img ng-class="{moneda:dinero.esMoneda, billete: !dinero.esMoneda}" class="img-responsive" ng-src="{{dinero.imagen}}">
             </button>
           </span>
       </ion-content>
     </div>
   </ion-content>
 </ion-view>
-<ion-footer-bar class="bar-positive">
+<ion-footer-bar ng-class="{'bar-assertive': !vm.isDineroSuficiente(), 'bar-balanced': vm.isDineroSuficiente() }">
   <h1 class="title"></h1>
   <div class="buttons">
     <button class="button" ng-click="vm.finDeRecepcion()">Fin de la recepción</button>
