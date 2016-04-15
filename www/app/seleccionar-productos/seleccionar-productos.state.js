@@ -4,6 +4,6 @@ angular.module('brisas.pantallas')
   .state('seleccionar-productos', {
     url: '/seleccionar-productos',
     templateUrl: 'app/seleccionar-productos/seleccionar-productos.html',
-    controller: 'SeleccionarProductosCtrl'
+    controller: 'SeleccionarProductosCtrl as vm'
   });
 });

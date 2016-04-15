@@ -1,22 +1,30 @@
+<ion-header-bar class="bar-positive col-50">
+  <h1 class="title">Productos</h1>
+</ion-header-bar>
+<ion-header-bar class="bar-balanced col-50 col-offset-50">
+  <h1 class="title">Productos Seleccionados</h1>
+</ion-header-bar>
 <ion-view>
-  <ion-content ng-controller="SeleccionarProductosCtrl as vm">
+  <ion-content class="gallery" scroll="false">
     <div class="row row-top col-50">
-      <ion-scroll width="600" height="200" direction="xy">
+      <ion-content class="col-50 text-center">
         <span ng-repeat="producto in vm.productos">
-          <button class="button button-light">
-            <img src="{{producto.imagen}}" alt="" class="imagen-seleccion" ng-click="vm.agregarProducto()"/>
-          </button>
-        </span>
-      </ion-scroll>
-    </div>
-    <div class="row row-center">
-      <div class="col"></div>
-      <div class="col col-50">
-        <button class="button button-full button-assertive" ng-click="finDeRecepcion()">
-          Salir
-        </button>
-      </div>
-      <div class="col"></div>
+            <button type="button"  ng-click="vm.agregarProducto(producto)">
+              <img class="img-responsive" ng-src="{{producto.imagen}}" alt="" width="256"/>
+            </button>
+          </span>
+      </ion-content>
+      <ion-content class="col-offset-50 col-50 text-center">
+        <span ng-repeat="item in vm.seleccionados track by $index">
+            <button type="button" ng-click="vm.quitarSeleccionado($index)">
+              <img class="img-responsive" src="{{item.producto.imagen}}" width="256">
+            </button>
+          </span>
+      </ion-content>
     </div>
   </ion-content>
 </ion-view>
+<ion-footer-bar class="bar-positive" align-title="center">
+  <h1 class="title">Total = {{vm.calcularTotal() | currency }}</h1>
+  <button class="button">Confirmar</button>
+</ion-footer-bar>
