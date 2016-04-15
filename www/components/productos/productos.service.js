@@ -4,6 +4,10 @@
 
   function Productos($http, $timeout) {
 
+    var vm = this;
+
+    vm.getProductos = getProductos;
+
     function getProductos() {
         return $http.get('components/productos/productos.json');
     }
