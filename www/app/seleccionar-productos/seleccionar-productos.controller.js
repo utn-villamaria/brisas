@@ -1,4 +1,4 @@
-angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', function($scope, $ionicPopup) {
+angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', function($scope, $state, $ionicPopup, Productos, CobroActual) {
 
   var vm = this;
 
@@ -25,63 +25,81 @@ angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', functi
 
   vm.calcularTotal = function() {
     var total = 0;
-    vm.seleccionados.forEach(function(item){
+    vm.seleccionados.forEach(function(item) {
       total = total + item.importe;
     });
-    return total;
+    return Math.ceil(total * 2) / 2;
   };
 
   vm.popupImporte = function(producto) {
     $scope.info = {};
-
     var dialogo = $ionicPopup.show({
-      template: '<input type="number" ng-model="info.cantidad">',
-      title: 'Ingrese Importe',
+      template: '<input type="number" min="0" ng-model="info.precio" style="height: 80px; font-size: 60px;">',
+      title: '<b>Ingrese Importe</b>',
       subTitle: '',
       scope: $scope,
       buttons: [{
-        text: '<b>Aceptar</b>',
-        type: 'button-positive',
+        text: '',
+        type: 'boton-grande button-balanced ion-checkmark-round',
         onTap: function(e) {
-          if (!$scope.info.cantidad) {
-            //don't allow the user to close unless he enters wifi password
+          if (!$scope.info.precio || $scope.info.precio <= 0) {
             e.preventDefault();
           } else {
-            return $scope.info.cantidad;
+            return $scope.info.precio;
           }
         }
       }, {
-        text: 'Cancelar'
+        text: '',
+        type: 'boton-grande button-assertive ion-close-round',
+        onTap: function(e) {
+          return false;
+        }
       }]
     });
 
     dialogo.then(function(precio) {
-      vm.agregar(producto, precio);
+      if (precio) {
+        vm.agregar(producto, precio);
+      }
+
     });
   }
 
-  vm.productos = [{
-    imagen: 'http://misimagenesde.com/wp-content/uploads/2013/07/imagenes-de-pasteles-2.jpg'
-  }, {
-    imagen: 'http://misimagenesde.com/wp-content/uploads/2013/07/imagenes-de-pasteles-2.jpg'
-  }, {
-    imagen: 'http://misimagenesde.com/wp-content/uploads/2013/07/imagenes-de-pasteles-2.jpg'
-  }, {
-    imagen: 'http://misimagenesde.com/wp-content/uploads/2013/07/imagenes-de-pasteles-2.jpg'
-  }, {
-    imagen: 'http://misimagenesde.com/wp-content/uploads/2013/07/imagenes-de-pasteles-2.jpg'
-  }, {
-    imagen: 'http://misimagenesde.com/wp-content/uploads/2013/07/imagenes-de-pasteles-2.jpg'
-  }, {
-    imagen: 'http://misimagenesde.com/wp-content/uploads/2013/07/imagenes-de-pasteles-2.jpg'
-  }, {
-    imagen: 'http://misimagenesde.com/wp-content/uploads/2013/07/imagenes-de-pasteles-2.jpg'
-  }, {
-    imagen: 'http://misimagenesde.com/wp-content/uploads/2013/07/imagenes-de-pasteles-2.jpg'
-  }];
+  vm.popupConfirmarVenta = function() {
+    if (vm.seleccionados.length > 0) {
+      var dialogo = $ionicPopup.show({
+        title: '<b>¿Confirma la venta?</b>',
+        subTitle: '',
+        scope: $scope,
+        buttons: [{
+          text: '',
+          type: 'boton-grande button-balanced ion-checkmark-round',
+          onTap: function(e) {
+            return true;
+          }
+        }, {
+          text: '',
+          type: 'boton-grande button-assertive ion-close-round',
+          onTap: function(e) {
+            dialogo.close();
+          }
+        }]
+      });
 
-  vm.finDeSeleccion = function() {
-    alert('Volver al estado anterior');
-  };
+      dialogo.then(function(confirma) {
+        if (confirma) {
+          CobroActual.set({
+            'monto': vm.calcularTotal(),
+            'productos' : vm.seleccionados
+          });
+          $state.go('recepcion');
+        }
+      });
+    }
+  }
+
+  Productos.getProductos().then(function(response) {
+    vm.productos = response.data;
+  });
 
 });

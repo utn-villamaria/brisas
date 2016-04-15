@@ -3,96 +3,112 @@
     "id": 1,
     "valor": 100.0,
     "imagen": "components/dinero/imagenes/roca.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 2,
     "valor": 100.0,
     "imagen": "components/dinero/imagenes/evita.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 3,
     "valor": 50.0,
     "imagen": "components/dinero/imagenes/sarmiento.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 4,
     "valor": 50.0,
     "imagen": "components/dinero/imagenes/malvinas.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 5,
     "valor": 20.0,
     "imagen": "components/dinero/imagenes/rosas.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 6,
     "valor": 10.0,
     "imagen": "components/dinero/imagenes/belgrano.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 7,
     "valor": 10.0,
     "imagen": "components/dinero/imagenes/belgrano_nuevo.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 8,
     "valor": 5.0,
     "imagen": "components/dinero/imagenes/san_martin.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 9,
     "valor": 5.0,
     "imagen": "components/dinero/imagenes/san_martin_nuevo.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 10,
     "valor": 2.0,
     "imagen": "components/dinero/imagenes/mitre.jpg",
-    "esMoneda": false
+    "esMoneda": false,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 11,
     "valor": 2.0,
     "imagen": "components/dinero/imagenes/moneda_2.jpg",
-    "esMoneda": true
+    "esMoneda": true,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 12,
     "valor": 1.0,
     "imagen": "components/dinero/imagenes/moneda_1.jpg",
-    "esMoneda": true
+    "esMoneda": true,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 13,
     "valor": 0.5,
     "imagen": "components/dinero/imagenes/moneda_50.jpg",
-    "esMoneda": true
+    "esMoneda": true,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 14,
     "valor": 0.25,
     "imagen": "components/dinero/imagenes/moneda_25.jpg",
-    "esMoneda": true
+    "esMoneda": true,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 15,
     "valor": 0.10,
     "imagen": "components/dinero/imagenes/moneda_10.jpg",
-    "esMoneda": true
+    "esMoneda": true,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   },
   {
     "id": 16,
     "valor": 0.05,
     "imagen": "components/dinero/imagenes/moneda_5.jpg",
-    "esMoneda": true
+    "esMoneda": true,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS"
   }
 ]
