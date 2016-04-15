@@ -1,0 +1,25 @@
+<ion-content class="gallery" ng-controller="VueltoController">
+  <div class="row row-top">
+    <div class="col">
+      <div class="col">
+        <button class="button button-full button-positive" ng-click="finDeVenta()">
+          Fin de venta
+        </button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col">
+        <button class="button button-full button-assertive" ng-click="actualizarCaja()">
+          Actualizar caja
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row row-center">
+    <ion-scroll zooming="false" direction="y" style="width: 1024px; height: 500px">
+      <span ng-repeat="moneda in vuelto">
+            <img class="img-responsive" ng-src="{{moneda.imagen}}"  width="128">
+      </span>
+    </ion-scroll>
+  </div>
+</ion-content>

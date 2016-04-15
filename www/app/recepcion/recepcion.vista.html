@@ -1,0 +1,31 @@
+<ion-nav-view>
+  <ion-content ng-controller="RecepcionController as vm" class="gallery">
+    <div class="row">
+      <div class="row row-top col-50">
+        <ion-scroll width="600" height="200" direction="xy">
+          <span ng-repeat="moneda in vm.billetes">
+            <button type="button" ng-click="vm.agregarBillete(moneda)">
+              <img class="img-responsive" src="{{moneda.imagen}}" width="128">
+            </button>
+          </span>
+        </ion-scroll>
+      </div>
+      <div class="row row-top col-50">
+        <ion-scroll width="600" height="200" direction="xy">
+          <span ng-repeat="moneda in vm.seleccionados track by $index">
+            <img class="img-responsive" src="{{moneda.imagen}}" width="128">
+          </span>
+        </ion-scroll>
+      </div>
+    </div>
+    <div class="row row-center">
+      <div class="col"></div>
+      <div class="col col-50">
+        <button class="button button-full button-positive" ng-click="vm.finDeRecepcion()">
+          Fin de recepción
+        </button>
+      </div>
+      <div class="col"></div>
+    </div>
+  </ion-content>
+</ion-nav-view>
