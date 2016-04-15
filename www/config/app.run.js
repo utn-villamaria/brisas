@@ -12,6 +12,8 @@
         $state.go('inicioCajaBillete');
       } else if (error === 'NCCerror') {
         $state.go('principal');
+      } else if (error === 'CoAerror') {
+        $state.go('principal');
       }
 
     });

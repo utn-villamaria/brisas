@@ -11,6 +11,13 @@ angular.module('brisas.pantallas')
         return Dinero.getDinero().then(function(response) {
           return response.data;
         });
+      },
+      montoACobrar: function(CobroActual) {
+        if (CobroActual.get().monto) {
+          return CobroActual.get().monto;
+        } else {
+          throw 'CoAerror';
+        }
       }
     }
   });
