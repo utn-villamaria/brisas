@@ -7,7 +7,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('brisas.pantallas', ['ionic']);
-angular.module('brisas.logica', ['ionic','ngStorage']);
+angular.module('brisas.logica', ['ionic', 'ngStorage', 'ngCordova']);
 angular.module('brisas', ['ionic', 'brisas.pantallas', 'brisas.logica']);
 
 })();

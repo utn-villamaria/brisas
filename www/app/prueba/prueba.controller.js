@@ -1,10 +1,12 @@
 (function() {
 
-  function PruebaCtrl(Cobro,Caja,VueltoTest,Dinero,MultiplosDinero) {
+  function PruebaCtrl(Cobro,Caja,VueltoTest,Dinero,MultiplosDinero,Imagenes) {
 
     var vm = this;
 
     vm.montoCobrar = 2.0;
+
+    vm.sacarFoto = sacarFoto;
 
     vm.dineroRecibido = [
       {
@@ -26,6 +28,10 @@
       //   "esMoneda": false
       // }
     ];
+
+    function sacarFoto() {
+      Imagenes.sacarFoto();
+    }
 
     Caja.abrirCaja([
       {
