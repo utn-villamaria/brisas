@@ -33,11 +33,6 @@
       Cobro.aplicarVuelto(cobroActual.vuelto,cobroActual.dineroRecibido,cobroActual.productos);
       cobroActual = null;
     }
-
-    cobroActual = {
-      monto: 55.8
-    };
-
   }
 
 })();

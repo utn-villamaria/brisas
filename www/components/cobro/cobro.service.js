@@ -53,6 +53,9 @@
       var dineroDisponible = sumarDineroRecibido(otraCaja, dinero);
       var recibido = montoRecibido(dinero);
       var vuelto = (recibido * 100 - montoACobrar * 100) / 100;
+      if (vuelto === 0) {
+        return [];
+      }
       var dineroFiltrado = filterFilter(dineroDisponible,function(valor) {
         return valor.cantidad > 0;
       });
