@@ -54,53 +54,53 @@
 
 
     // TODO eliminar
-    Caja.abrirCaja([
-      {
-          "dinero": {
-            "id": 10,
-            "valor": 2.0,
-            "imagen": "components/dinero/imagenes/2.jpg",
-            "esMoneda": false
-          },
-          "cantidad": 4
-        },
-        {
-          "dinero": {
-            "id": 8,
-            "valor": 5.0,
-            "imagen": "components/dinero/imagenes/5.jpg",
-            "esMoneda": false
-          },
-          "cantidad": 15
-        },
-        {
-          "dinero": {
-            "id": 6,
-            "valor": 10.0,
-            "imagen": "components/dinero/imagenes/10.jpg",
-            "esMoneda": false
-          },
-          "cantidad": 10
-        },
-        {
-          "dinero": {
-            "id": 14,
-            "valor": 0.25,
-            "imagen": "components/dinero/imagenes/25cm.jpg",
-            "esMoneda": true
-          },
-          "cantidad": 10
-        },
-        {
-          "dinero": {
-            "id": 15,
-            "valor": 0.10,
-            "imagen": "components/dinero/imagenes/10cm.jpg",
-            "esMoneda": true
-          },
-          "cantidad": 10
-        }
-    ]);
+    // Caja.abrirCaja([
+    //   {
+    //       "dinero": {
+    //         "id": 10,
+    //         "valor": 2.0,
+    //         "imagen": "components/dinero/imagenes/2.jpg",
+    //         "esMoneda": false
+    //       },
+    //       "cantidad": 4
+    //     },
+    //     {
+    //       "dinero": {
+    //         "id": 8,
+    //         "valor": 5.0,
+    //         "imagen": "components/dinero/imagenes/5.jpg",
+    //         "esMoneda": false
+    //       },
+    //       "cantidad": 15
+    //     },
+    //     {
+    //       "dinero": {
+    //         "id": 6,
+    //         "valor": 10.0,
+    //         "imagen": "components/dinero/imagenes/10.jpg",
+    //         "esMoneda": false
+    //       },
+    //       "cantidad": 10
+    //     },
+    //     {
+    //       "dinero": {
+    //         "id": 14,
+    //         "valor": 0.25,
+    //         "imagen": "components/dinero/imagenes/25cm.jpg",
+    //         "esMoneda": true
+    //       },
+    //       "cantidad": 10
+    //     },
+    //     {
+    //       "dinero": {
+    //         "id": 15,
+    //         "valor": 0.10,
+    //         "imagen": "components/dinero/imagenes/10cm.jpg",
+    //         "esMoneda": true
+    //       },
+    //       "cantidad": 10
+    //     }
+    // ]);
 
   }
 

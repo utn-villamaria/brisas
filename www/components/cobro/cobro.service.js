@@ -2,7 +2,7 @@
 
   angular.module('brisas.logica').service('Cobro', Cobro);
 
-  function Cobro(orderByFilter, Caja, Vuelto) {
+  function Cobro(orderByFilter, filterFilter, Caja, Vuelto) {
 
     var vm = this;
 
@@ -53,7 +53,10 @@
       var dineroDisponible = sumarDineroRecibido(otraCaja, dinero);
       var recibido = montoRecibido(dinero);
       var vuelto = (recibido * 100 - montoACobrar * 100) / 100;
-      var resultado = Vuelto.calcular(vuelto, dineroDisponible);
+      var dineroFiltrado = filterFilter(dineroDisponible,function(valor) {
+        return valor.cantidad > 0;
+      });
+      var resultado = Vuelto.calcular(vuelto, dineroFiltrado);
       return resultado;
     }
 

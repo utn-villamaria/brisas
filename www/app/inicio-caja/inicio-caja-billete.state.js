@@ -6,7 +6,16 @@
         $stateProvider.state('inicioCajaBillete',{
             url: '/inicio-caja-billete',
             controller: 'InicioCajaBilleteCtrl as vm',
-            templateUrl: 'app/inicio-caja/inicio-caja-billete.html'
+            templateUrl: 'app/inicio-caja/inicio-caja-billete.html',
+            resolve: {
+              caja: function(Caja) {
+                if (!Caja.cajaAbierta()) {
+                  return true;
+                } else {
+                  throw 'NCCerror';
+                }
+              }
+            }
         });
     }
 

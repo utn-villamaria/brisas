@@ -6,7 +6,16 @@
     $stateProvider.state('principal',{
       url: '/',
       controller: 'PrincipalCtrl as vm',
-      templateUrl: 'app/principal/principal.html'
+      templateUrl: 'app/principal/principal.html',
+      resolve: {
+        cajaActual: function(Caja) {
+          if (Caja.cajaAbierta()) {
+            return Caja.getCajaActual();
+          } else {
+            throw 'NCAerror';
+          }
+        }
+      }
     });
   }
 

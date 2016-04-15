@@ -3,8 +3,6 @@
 </ion-header-bar>
 <ion-view>
     <ion-content>
-        <br>
-        <br>
         <div class="row row-center" style="text-align:center; height:auto; width:auto; margin-left: auto; margin-right: auto;">
             <div class="col">
                 <ion-list>
@@ -16,7 +14,7 @@
                             </div>
                             <div class="col col-center">
                                 <label class="item item-input">
-                                    <input ng-model="elemento.cantidad" type="number" placeholder=" " min="0">
+                                    <input ng-model="elemento.cantidad" type="number" placeholder=" " min="0" style="height: 80px; font-size: 60px;">
                                 </label>
                             </div>
                         </div>
@@ -30,6 +28,6 @@
 <ion-footer-bar class="bar-positive">
   <h1 class="title"></h1>
   <div class="buttons">
-    <button class="button" ng-click="vm.abrirCajaInicial()">Abrir Caja</button>
+    <button class="button boton-grande ion-checkmark-round" ng-click="vm.abrirCajaInicial()"></button>
   </div>
 </ion-footer-bar>
