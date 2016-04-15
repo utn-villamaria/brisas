@@ -3,7 +3,8 @@
 
   function Vuelto2(orderByFilter) {
     var vm = this;
-    vm.profundidad_maxima = 15;
+    vm.profundidad_maxima = 30;
+    vm.optimizar = true;
     vm.calcular = calcular;
 
     function calcular(vuelto, dinero_disponible, profundidad_maxima) {
@@ -25,18 +26,28 @@
       validarMaximoVuelto(indiceDinero,maximoVuelto,vueltoRestante,cantidadRestante,opciones);
       opciones.forEach(function(i) {
         if (i === indiceDinero) {
-          var nuevoVuelto = vueltoRestante - vm.dinero[indiceDinero].dinero.valor * 100;
-          var nuevaCantidad = cantidadRestante - 1;
+          var cantidadBilletes;
+          if (vm.optimizar && vm.dinero[indiceDinero].dinero.multiploVuelto <= cantidadRestante) {
+            var valorMultiplo = vm.dinero[indiceDinero].dinero.valor * 100 * vm.dinero[indiceDinero].dinero.multiploVuelto;
+            cantidadBilletes = (Math.floor(vueltoRestante / valorMultiplo) * vm.dinero[indiceDinero].dinero.multiploVuelto);
+            if (!cantidadBilletes) cantidadBilletes = 1;
+          } else {
+            cantidadBilletes = 1;
+          }
+          var nuevoVuelto = vueltoRestante - vm.dinero[indiceDinero].dinero.valor * 100 * cantidadBilletes;
+          var nuevaCantidad = cantidadRestante - cantidadBilletes;
           var nuevoDinero = angular.copy(dineroAsignado);
-          nuevoDinero.push(vm.dinero[indiceDinero].dinero);
+          for (var j = 0; j < cantidadBilletes; j++) {
+              nuevoDinero.push(vm.dinero[indiceDinero].dinero);
+          }
           if (nuevoVuelto === 0) {
             vm.solucion = nuevoDinero;
             return;
-          } else if (vueltoRestante > 0) {
-            calcularVuelto(i,nuevoVuelto,nuevaCantidad,nuevoDinero,profundidad++);
+          } else if (nuevoVuelto > 0) {
+            calcularVuelto(i,nuevoVuelto,nuevaCantidad,nuevoDinero,profundidad+1);
           }
         } else {
-          calcularVuelto(i,vueltoRestante,vm.dinero[i].cantidad,angular.copy(dineroAsignado),profundidad++);
+          calcularVuelto(i,vueltoRestante,vm.dinero[i].cantidad,angular.copy(dineroAsignado),profundidad+1);
         }
       });
     }

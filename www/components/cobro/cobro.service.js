@@ -46,7 +46,7 @@
       var dinero = agruparDinero(dineroRecibido);
       var dineroDisponible = sumarDineroRecibido(otraCaja, dinero);
       var recibido = montoRecibido(dinero);
-      var vuelto = recibido - montoACobrar;
+      var vuelto = (recibido * 100 - montoACobrar * 100) / 100;
       var resultado = Vuelto2.calcular(vuelto, dineroDisponible);
       return resultado;
     }

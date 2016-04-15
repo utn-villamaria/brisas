@@ -1,6 +1,6 @@
 (function() {
 
-  function PruebaCtrl(Cobro,Caja,VueltoTest) {
+  function PruebaCtrl(Cobro,Caja,VueltoTest,Dinero,MultiplosDinero) {
 
     var vm = this;
 
@@ -56,6 +56,11 @@
           "cantidad": 1
         }
     ]);
+
+    Dinero.getDinero().then(function(dinero){
+      MultiplosDinero.calcularMultiplos(dinero.data);
+      console.log(dinero.data);
+    });
 
     vm.caja = Caja.getCajaActual();
     console.log(JSON.stringify(vm.caja));
