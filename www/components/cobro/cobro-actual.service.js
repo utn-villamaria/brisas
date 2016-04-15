@@ -14,11 +14,11 @@
 
     var cobroActual = null;
 
-    function get(nuevo) {
+    function get() {
       return cobroActual;
     }
 
-    function set() {
+    function set(nuevo) {
       cobroActual = nuevo;
     }
 
