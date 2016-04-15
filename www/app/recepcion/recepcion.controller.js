@@ -1,38 +1,33 @@
-angular.module('brisas.pantallas').controller('RecepcionController', function($scope) {
+(function(){
 
-  var vm = this;
-  vm.finDeRecepcion = function() {
-    alert("Termino recepcion");
-  };
+  angular.module('brisas.pantallas').controller('RecepcionCtrl', RecepcionCtrl);
 
-  vm.agregarBillete = function(moneda) {
-    vm.seleccionados.push(moneda);
-  };
+  function RecepcionCtrl(CobroActual, dinero) {
 
-  vm.seleccionados = [];
+    var vm = this;
 
-  vm.billetes = [{
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }, {
-    imagen: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAUz8nBeKe0LvACjldSwGZUUbBOAX-v020Zk78ujMXlfvjnAbS'
-  }];
+    vm.finDeRecepcion = finDeRecepcion;
 
-});
+    vm.agregarDinero = agregarDinero;
+
+    vm.quitarDinero = quitarDinero;
+
+    function agregarDinero(dinero) {
+      vm.seleccionados.push(dinero);
+    }
+
+    function quitarDinero(i) {
+      vm.seleccionados.splice(i,1);
+    }
+
+    function finDeRecepcion() {
+      CobroActual.get().dineroRecibido = vm.seleccionados;
+    }
+
+    vm.seleccionados = [];
+
+    vm.dinero = dinero;
+
+  }
+
+})();

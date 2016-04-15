@@ -4,6 +4,13 @@ angular.module('brisas.pantallas')
   .state('recepcion', {
     url: '/recepcion',
     templateUrl: 'app/recepcion/recepcion.html',
-    controller: 'RecepcionController'
+    controller: 'RecepcionCtrl as vm',
+    resolve: {
+      dinero: function(Dinero) {
+        return Dinero.getDinero().then(function(response) {
+          return response.data;
+        });
+      }
+    }
   });
 });
