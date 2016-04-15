@@ -1,0 +1,20 @@
+img {
+    max-width: 25%;
+    /**height: auto;**/
+    width: auto/9; /* Bug de ie8 */
+}
+button{
+    vertical-align: middle;
+}
+
+#uno{
+    background-color: lightsteelblue;
+}
+#dos{
+    background-color: lightgrey;
+}
+div.row {
+    max-height: 50%;
+
+    width: auto/9; /* Bug de ie8 */
+}
