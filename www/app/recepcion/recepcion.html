@@ -7,17 +7,17 @@
 <ion-view>
   <ion-content class="gallery" scroll="false">
       <div class="row row-top col-50">
-        <ion-content class="col-50">
+        <ion-content class="col-50 text-center">
           <span ng-repeat="dinero in vm.dinero">
             <button type="button" ng-click="vm.agregarDinero(dinero)">
-              <img ng-class="{moneda:dinero.esMoneda, billete: !dinero.esMoneda}" class="img-responsive" src="{{dinero.imagen}}">
+              <img ng-class="{moneda:dinero.esMoneda, billete: !dinero.esMoneda}" class="img-responsive" ng-src="{{dinero.imagen}}">
             </button>
           </span>
       </ion-content>
-        <ion-content class="col-offset-50 col-50">
+        <ion-content class="col-offset-50 col-50 text-center">
           <span ng-repeat="dinero in vm.seleccionados track by $index">
             <button type="button" ng-click="vm.quitarDinero($index)">
-              <img ng-class="{moneda:dinero.esMoneda, billete: !dinero.esMoneda}" class="img-responsive" src="{{dinero.imagen}}">
+              <img ng-class="{moneda:dinero.esMoneda, billete: !dinero.esMoneda}" class="img-responsive" ng-src="{{dinero.imagen}}">
             </button>
           </span>
       </ion-content>

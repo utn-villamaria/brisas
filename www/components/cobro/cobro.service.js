@@ -9,7 +9,8 @@
     vm.obtenerVuelto = obtenerVuelto;
     vm.aplicarVuelto = aplicarVuelto;
 
-    function aplicarVuelto(vuelto, dineroRecibido, caja) {
+    function aplicarVuelto(vuelto, dineroRecibido, productos, caja) {
+      if (!caja) caja = Caja.getCajaActual();
       if (!vuelto) return;
       dineroRecibido.forEach(function(dinero) {
         var presente = false;
@@ -40,6 +41,10 @@
           dineroRecibido: dineroRecibido
         }
       );
+      if (!caja.ventas) caja.ventas = [];
+      caja.ventas.push({
+        productos: productos
+      })
     }
 
     function obtenerVuelto(montoACobrar,dineroRecibido,caja) {

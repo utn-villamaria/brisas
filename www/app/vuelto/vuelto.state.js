@@ -4,6 +4,7 @@ angular.module('brisas.pantallas')
   .state('vuelto', {
     url: '/vuelto',
     templateUrl: 'app/vuelto/vuelto.html',
-    controller: 'VueltoCtrl as vm'
+    controller: 'VueltoCtrl as vm',
+    cache: false
   });
 });

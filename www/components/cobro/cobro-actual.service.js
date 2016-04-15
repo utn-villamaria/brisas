@@ -12,6 +12,8 @@
 
     vm.calcularVuelto = calcularVuelto;
 
+    vm.finVenta = finVenta;
+
     var cobroActual = null;
 
     function get() {
@@ -25,7 +27,11 @@
     function calcularVuelto(dineroRecibido) {
       cobroActual.dineroRecibido = dineroRecibido;
       cobroActual.vuelto = Cobro.obtenerVuelto(cobroActual.monto,cobroActual.dineroRecibido);
-      console.log(cobroActual);
+    }
+
+    function finVenta() {
+      Cobro.aplicarVuelto(cobroActual.vuelto,cobroActual.dineroRecibido,cobroActual.productos);
+      cobroActual = null;
     }
 
     cobroActual = {

@@ -1,18 +1,22 @@
-angular.module('brisas.pantallas')
-.controller('VueltoCtrl',VueltoCtrl);
+(function(){
 
-function VueltoCtrl($scope, $state,$ionicActionSheet, $timeout,CobroActual) {
+  angular.module('brisas.pantallas')
+  .controller('VueltoCtrl',VueltoCtrl);
 
-  var vm=this;
+  function VueltoCtrl($state, $ionicHistory, CobroActual) {
 
-  vm.vuelto = CobroActual.get().vuelto;
-  console.log(vm.vuelto);
+    var vm=this;
 
-  vm.finDeVenta=function(){
-    $state.go('estado de venta cambiar cuando se integre');
-  };
-  $scope.actualizarCaja=function(){
-    alert("redireccionar a pantalla de inicio de caja, donde se le solicita contraseña, una vez cargada la caja regresar");
-    $state.go('estado de inicio de caja cambiar cuando se integre');
-  };
-}
+    vm.vuelto = CobroActual.get().vuelto;
+
+    vm.finDeVenta=function(){
+      CobroActual.finVenta();
+      $ionicHistory.nextViewOptions({
+        historyRoot: true
+      });
+      $state.go('principal');
+    };
+
+  }
+
+})();
