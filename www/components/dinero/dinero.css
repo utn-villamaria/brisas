@@ -6,6 +6,10 @@
   width: 100px;
 }
 
-.billete-inicio {
-  width: 100px;
+.billete-cierre {
+  width: 600px;
+}
+
+.moneda-cierre {
+  width: 300px;
 }
