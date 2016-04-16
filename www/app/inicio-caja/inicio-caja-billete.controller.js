@@ -7,7 +7,7 @@
         Dinero.getDinero().then(function(respuesta){
             vm.dinero=respuesta.data;
 
-            vm.dinero.sort(function(a, b){return b.valor-a.valor});
+            vm.dinero.sort(function(a, b){return b.valor-a.valor;});
 
             vm.dinero.forEach(function(e){
                 var objeto ={
@@ -19,9 +19,7 @@
         });
 
         vm.abrirCajaInicial=function(){
-            console.log(vm.cajaInicial);
             Caja.abrirCaja(vm.cajaInicial);
-            console.log(Caja.getCajaActual());
             $state.go('principal');
         };
 
