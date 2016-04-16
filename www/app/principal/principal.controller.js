@@ -1,6 +1,6 @@
 (function() {
 
-  function PrincipalCtrl($state) {
+  function PrincipalCtrl($scope, $state, TransicionEstadoProtegido) {
 
     var vm = this;
 
@@ -15,11 +15,11 @@
     }
 
     function modificarCaja() {
-      $state.go('modificarCaja');
+      TransicionEstadoProtegido.crearDialogoContrasenia($scope,'modificarCaja');
     }
 
     function modificarPrecioProducto() {
-      $state.go('actualizar-precio-producto');
+      TransicionEstadoProtegido.crearDialogoContrasenia($scope,'actualizar-precio-producto');
     }
   }
 
