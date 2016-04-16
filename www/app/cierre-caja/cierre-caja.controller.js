@@ -1,5 +1,5 @@
 (function() {
-  angular.module('brisas.pantallas').controller('CierreCajaCtrl', function($state, $scope, $ionicPopup, Caja) {
+  angular.module('brisas.pantallas').controller('CierreCajaCtrl', function($state, $scope, $ionicPopup, $ionicHistory, Caja) {
     var vm = this;
     vm.dinero = Caja.getCajaActual().dinero;
 
@@ -34,6 +34,9 @@
       dialogo.then(function(confirma) {
         if (confirma) {
           Caja.cerrarCaja();
+          $ionicHistory.nextViewOptions({
+            historyRoot: true
+          })
           $state.go('inicioCajaBillete');
         }
       });

@@ -10,6 +10,8 @@
 
     vm.modificarPrecioProducto = modificarPrecioProducto;
 
+    vm.cerrarCaja = cerrarCaja;
+
     function vender() {
       $state.go('seleccionar-productos');
     }
@@ -21,6 +23,11 @@
     function modificarPrecioProducto() {
       TransicionEstadoProtegido.crearDialogoContrasenia($scope,'actualizar-precio-producto');
     }
+
+    function cerrarCaja() {
+      TransicionEstadoProtegido.crearDialogoContrasenia($scope,'cierre-caja');
+    }
+
   }
 
   angular.module('brisas.logica').controller('PrincipalCtrl', PrincipalCtrl);
