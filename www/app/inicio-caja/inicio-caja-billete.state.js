@@ -7,6 +7,7 @@
             url: '/inicio-caja-billete',
             controller: 'InicioCajaBilleteCtrl as vm',
             templateUrl: 'app/inicio-caja/inicio-caja-billete.html',
+            cache: false,
             resolve: {
               caja: function(Caja) {
                 if (!Caja.cajaAbierta()) {

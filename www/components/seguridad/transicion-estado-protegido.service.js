@@ -8,7 +8,7 @@
 
     vm.crearDialogoContrasenia = crearDialogoContrasenia;
 
-    var contrasenia = '1234';
+    var contrasenia = 'fbrisas';
 
     function crearDialogoContrasenia(scope, estado) {
       scope.info = {};
@@ -40,7 +40,7 @@
       dialogo.then(function(valor) {
         if (valor) {
           $state.go(estado);
-        }          
+        }
       });
     }
 

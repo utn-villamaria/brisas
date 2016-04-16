@@ -22,7 +22,6 @@
             Caja.abrirCaja(vm.cajaInicial);
             $state.go('principal');
         };
-
     }
 
     angular.module('brisas.logica').controller('InicioCajaBilleteCtrl', InicioCajaBilleteCtrl);

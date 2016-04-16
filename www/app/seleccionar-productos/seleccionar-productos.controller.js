@@ -1,4 +1,4 @@
-angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', function($scope, $state, $ionicPopup, Productos, CobroActual) {
+angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', function($scope, $state, $ionicPopup, Productos, CobroActual, currencyFilter) {
 
   var vm = this;
 
@@ -13,15 +13,16 @@ angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', functi
   };
 
   vm.agregar = function(producto, importe) {
-    vm.seleccionados.push({
+    var nuevo_producto = [{
       'producto': producto,
       'importe': importe
-    });
+    }];
+    vm.seleccionados = nuevo_producto.concat(vm.seleccionados);
   };
 
   vm.quitarSeleccionado = function(indice) {
     vm.seleccionados.splice(indice, 1);
-  }
+  };
 
   vm.calcularTotal = function() {
     var total = 0;
@@ -63,12 +64,12 @@ angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', functi
       }
 
     });
-  }
+  };
 
   vm.popupConfirmarVenta = function() {
     if (vm.seleccionados.length > 0) {
       var dialogo = $ionicPopup.show({
-        title: '<b>¿Confirma la venta?</b>',
+        title: '<span class="big">Monto a cobrar</span><br><span class="extra-big">'+currencyFilter(vm.calcularTotal())+'</span>',
         subTitle: '',
         scope: $scope,
         buttons: [{
