@@ -2,20 +2,31 @@
 
   angular.module('brisas.logica').service('Productos', Productos);
 
-  function Productos($http, $timeout) {
+  function Productos($http, $localStorage, $q) {
 
     var vm = this;
 
     vm.getProductos = getProductos;
+    vm.actualizarProductos = actualizarProductos;
+    if(!$localStorage.productos) $localStorage.productos = [];
 
     function getProductos() {
-        return $http.get('components/productos/productos.json');
+      var deferer = $q.defer();
+      if($localStorage.productos.length === 0) {
+        $http.get('components/productos/productos.json').then(function(response) {
+          $localStorage.productos = response.data;
+          deferer.resolve(response.data);
+        }, function(error) {
+          deferer.reject(error);
+        });
+      } else {
+        deferer.resolve($localStorage.productos);
+      }
+      return deferer.promise;
     }
 
-    function guardarProducto(producto) {
-      return $timeout(function() {
-        return null;
-      });
+    function actualizarProductos(productos) {
+      $localStorage.productos = productos;
     }
 
   }

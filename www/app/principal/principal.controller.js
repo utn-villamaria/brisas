@@ -8,12 +8,18 @@
 
     vm.vender = vender;
 
+    vm.modificarPrecioProducto = modificarPrecioProducto;
+
     function vender() {
       $state.go('seleccionar-productos');
     }
 
     function modificarCaja() {
       $state.go('modificarCaja');
+    }
+
+    function modificarPrecioProducto() {
+      $state.go('actualizar-precio-producto');
     }
   }
 
