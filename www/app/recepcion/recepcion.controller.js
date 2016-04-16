@@ -12,6 +12,7 @@
 
     vm.quitarDinero = quitarDinero;
     vm.isDineroSuficiente = isDineroSuficiente;
+    vm.calcularTotal = calcularTotal;
 
     vm.montoRecibido = 0;
 
@@ -48,13 +49,17 @@
       }
     }
 
+    function calcularTotal() {
+      return CobroActual.get().monto;
+    }
+
     vm.seleccionados = [];
 
     vm.dinero = dinero;
 
     vm.mostrarInfo = function() {
       $ionicPopup.alert({
-        title: 'No hay dinero suficiente!',
+        title: 'No hay dinero suficiente para dar vuelto!',
         template: '<div class="text-center"><span class="ion-close-circled boton-grande assertive"></span></div>',
         okText: 'Aceptar'
       });

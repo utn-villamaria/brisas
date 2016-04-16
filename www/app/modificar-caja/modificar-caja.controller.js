@@ -6,7 +6,7 @@
         vm.cajaInicial = orderByFilter(Caja.getCajaActual().dinero, 'dinero.valor', true);
 
         vm.setDineroCaja = function(){
-            Caja.getCajaActual().dinero = vm.cajaInicial;
+            Caja.actualizarCajaActual(vm.cajaInicial);
             $state.go('principal');
         };
 

@@ -12,6 +12,7 @@
     vm.abrirCaja = abrirCaja;
     vm.cerrarCaja = cerrarCaja;
     vm.cajaAbierta = cajaAbierta;
+    vm.actualizarCajaActual = actualizarCajaActual;
 
     if (!$localStorage.cajas) {
       $localStorage.cajas = [];
@@ -52,8 +53,26 @@
         fechaCierre: null,
         flujo: []
       };
-      caja.dinero = dinero;
+      actualizarCaja(caja,dinero);
       $localStorage.cajas.push(caja);
+    }
+
+    function actualizarCajaActual(dinero) {
+      actualizarCaja(getCajaActual(),dinero);
+    }
+
+    function actualizarCaja(caja, dinero) {
+      caja.dinero = dinero;
+      if (caja.dinero) {
+        caja.dinero.forEach(function(dineroEspecifico) {
+          var nuevaCantidad = parseInt(dineroEspecifico.cantidad);
+          if (isNaN(nuevaCantidad)) {
+            dineroEspecifico.cantidad = 0;
+          } else {
+            dineroEspecifico.cantidad = nuevaCantidad;
+          }
+        });
+      }
     }
 
     function cajaAbierta() {

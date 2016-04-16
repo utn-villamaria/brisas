@@ -6,7 +6,7 @@
     return {
       link: function(scope, element, attrs) {
         $timeout(function() {
-          element[0].focus();
+          cordova.plugins.Focus.focus(element);
         },1000);
       }
     };

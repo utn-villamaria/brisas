@@ -24,8 +24,8 @@
     </div>
   </ion-content>
 </ion-view>
-<ion-footer-bar ng-class="{'bar-assertive': !vm.isDineroSuficiente(), 'bar-balanced': vm.isDineroSuficiente() }">
-  <h1 class="title"></h1>
+<ion-footer-bar align-title="center" ng-class="{'bar-assertive': !vm.isDineroSuficiente(), 'bar-balanced': vm.isDineroSuficiente() }">
+  <h1 class="title">Monto a cobrar: {{vm.calcularTotal() | currency }}</h1>
   <div class="buttons">
     <button ng-show="vm.isDineroSuficiente()" class="button boton-grande ion-checkmark-round" ng-click="vm.finDeRecepcion()"></button>
   </div>
