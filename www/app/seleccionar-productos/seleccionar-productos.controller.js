@@ -34,7 +34,7 @@ angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', functi
   vm.popupImporte = function(producto) {
     $scope.info = {};
     var dialogo = $ionicPopup.show({
-      template: '<input type="number" min="0" max="1000" ng-model="info.precio" style="height: 80px; font-size: 60px;">',
+      template: '<input type="number" focus-me min="0" max="1000" ng-model="info.precio" style="height: 80px; font-size: 60px;">',
       title: '<b>Ingrese Importe</b>',
       subTitle: '',
       scope: $scope,
