@@ -96,10 +96,10 @@ angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', functi
         }
       });
     }
-  }
+  };
 
-  Productos.getProductos().then(function(response) {
-    vm.productos = response.data;
+  Productos.getProductos().then(function(data) {
+    vm.productos = data;
   });
 
 });
