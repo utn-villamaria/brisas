@@ -15,9 +15,10 @@
           </span>
       </ion-content>
       <ion-content class="col-offset-50 col-50 text-center">
-        <span ng-repeat="item in vm.seleccionados track by $index">
+        <span ng-repeat="item in vm.productosAgrupados">
             <button type="button" ng-click="vm.quitarSeleccionado($index)">
-              <img class="img-responsive" ng-src="{{item.producto.imagen}}" width="200">
+              <img class="img-responsive" ng-src="{{item.producto.imagen}}" width="125"><br>
+              <span class="letra-grande">{{ item.cantidad }}</span>
             </button>
           </span>
       </ion-content>

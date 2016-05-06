@@ -3,6 +3,27 @@ angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', functi
   var vm = this;
 
   vm.seleccionados = [];
+  vm.productosAgrupados = [];
+
+  function agrupar(productos) {
+    var productosAgrupados = [];
+    productos.forEach(function(producto) {
+      var presente = false;
+      productosAgrupados.forEach(function(prod) {
+        if(prod.producto.id === producto.producto.id){
+          prod.cantidad++;
+          presente = true;
+        }
+      });
+      if(!presente) {
+        productosAgrupados.push({
+          cantidad: 1,
+          producto: producto.producto
+        });
+      }
+    });
+    return productosAgrupados;
+  }
 
   vm.agregarProducto = function(producto) {
     if (producto.metodoVenta === 'U') {
@@ -18,10 +39,12 @@ angular.module('brisas.pantallas').controller('SeleccionarProductosCtrl', functi
       'importe': importe
     }];
     vm.seleccionados = nuevo_producto.concat(vm.seleccionados);
+    vm.productosAgrupados = agrupar(vm.seleccionados);
   };
 
   vm.quitarSeleccionado = function(indice) {
     vm.seleccionados.splice(indice, 1);
+    vm.productosAgrupados = agrupar(vm.seleccionados);
   };
 
   vm.calcularTotal = function() {

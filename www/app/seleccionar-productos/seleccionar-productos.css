@@ -19,3 +19,7 @@
 .popup-container .popup {
   width: 400px;
 }
+
+.letra-grande {
+  font-size:35px;
+}

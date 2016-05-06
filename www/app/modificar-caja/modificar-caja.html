@@ -27,8 +27,8 @@
         </div>
     </ion-content>
 </ion-view>
-<ion-footer-bar class="bar-positive">
-  <h1 class="title"></h1>
+<ion-footer-bar class="bar-positive" align-title="center">
+  <h1 class="title">{{ vm.calcularTotal()|currency}}</h1>
   <div class="buttons">
     <button class="button boton-grande ion-checkmark-round" ng-click="vm.setDineroCaja()"></button>
   </div>
