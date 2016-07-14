@@ -31,6 +31,7 @@
             });
           }
         }
+        $localStorage.versionProductos = response.data.version;
         deferer.resolve($localStorage.productos);
       }, function(error) {
         deferer.reject(error);
