@@ -12,16 +12,29 @@
 
     function getProductos() {
       var deferer = $q.defer();
-      if($localStorage.productos.length === 0) {
-        $http.get('components/productos/productos.json').then(function(response) {
-          $localStorage.productos = response.data;
-          deferer.resolve(response.data);
-        }, function(error) {
-          deferer.reject(error);
-        });
-      } else {
+      $http.get('components/productos/productos.json').then(function(response) {
+        if($localStorage.versionProductos && $localStorage.versionProductos === response.data.version) {
+        } else {
+          if ($localStorage.productos.length === 0) {
+            $localStorage.productos = response.data.productos;
+          } else {
+            response.data.productos.forEach(function(prod) {
+              var existe = false;
+              $localStorage.productos.forEach(function(localProd) {
+                if(prod.id === localProd.id) {
+                  existe = true;
+                }
+              });
+              if(!existe) {
+                $localStorage.productos.push(prod);
+              }
+            });
+          }
+        }
         deferer.resolve($localStorage.productos);
-      }
+      }, function(error) {
+        deferer.reject(error);
+      });
       return deferer.promise;
     }
 

@@ -1,4 +1,6 @@
-[
+{
+  "version": 1,
+"productos":[
   {
     "id": 1,
     "nombre": "Pepas",
@@ -103,5 +105,13 @@
     "precio": 35.0,
     "metodoVenta": "U",
     "imagen": "components/productos/imagenes/torta-coco.jpg"
+  },
+  {
+    "id": 16,
+    "nombre": "Pre Pizzetas",
+    "precio": 15.0,
+    "metodoVenta": "U",
+    "imagen": "components/productos/imagenes/pre-pizzetas.jpg"
   }
 ]
+}
