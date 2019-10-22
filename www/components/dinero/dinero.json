@@ -1,4 +1,11 @@
 [
+  
+  {
+    "id": 0,
+    "valor": 500,
+    "imagen": "components/dinero/imagenes/500.png",
+    "esMoneda": false
+  },
   {
     "id": 1,
     "valor": 100.0,
@@ -95,4 +102,5 @@
     "imagen": "components/dinero/imagenes/5cm.jpg",
     "esMoneda": true
   }
+ 
 ]
