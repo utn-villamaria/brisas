@@ -10,11 +10,11 @@
                 <ion-list>
                     <ion-item ng-repeat="elemento in vm.cajaInicial">
                         <div class="row">
-                            <div class="col-33">
-                                <img ng-src="{{elemento.dinero.imagen}}" ng-show="elemento.dinero.esMoneda">
-                                <img ng-src="{{elemento.dinero.imagen}}" ng-hide="elemento.dinero.esMoneda" width="300px">
+                            <div class="col-60">
+                                <img ng-src="{{elemento.dinero.imagen}}" style="float: right;" ng-show="elemento.dinero.esMoneda">
+                                <img ng-src="{{elemento.dinero.imagen}}" class="col" ng-hide="elemento.dinero.esMoneda" width="300px">
                             </div>
-                            <div class="col col-center">
+                            <div class="col-40 col-center">
                                 <label class="item item-input">
                                     <input ng-model="elemento.cantidad" type="number" placeholder=" " min="0" style="height: 80px; font-size: 60px;">
                                 </label>
