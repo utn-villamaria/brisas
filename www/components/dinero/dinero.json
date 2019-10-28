@@ -1,103 +1,156 @@
 [
-  
   {
-    "id": 0,
+    "id": 1,
+    "valor": 1000,
+    "imagen": "components/dinero/imagenes/1000.jpg",
+    "esMoneda": false
+  },
+  {
+    "id": 2,
     "valor": 500,
     "imagen": "components/dinero/imagenes/500.png",
     "esMoneda": false
   },
   {
-    "id": 1,
+    "id": 3,
+    "valor": 200,
+    "imagen": "components/dinero/imagenes/200.jpg",
+    "esMoneda": false
+  },
+  {
+    "id": 4,
+    "valor": 100,
+    "imagen": "components/dinero/imagenes/100x.jpg",
+    "esMoneda": false
+  },
+  {
+    "id": 5,
     "valor": 100.0,
     "imagen": "components/dinero/imagenes/100.jpg",
     "esMoneda": false
   },
   {
-    "id": 2,
+    "id": 6,
     "valor": 100.0,
     "imagen": "components/dinero/imagenes/100n.jpg",
     "esMoneda": false
   },
   {
-    "id": 3,
+    "id": 7,
+    "valor": 50.0,
+    "imagen": "components/dinero/imagenes/50x.jpg",
+    "esMoneda": false
+  },
+  {
+    "id": 8,
     "valor": 50.0,
     "imagen": "components/dinero/imagenes/50.jpg",
     "esMoneda": false
   },
   {
-    "id": 4,
+    "id": 9,
     "valor": 50.0,
     "imagen": "components/dinero/imagenes/50n.jpg",
     "esMoneda": false
   },
   {
-    "id": 5,
+    "id": 10,
+    "valor": 20.0,
+    "imagen": "components/dinero/imagenes/20x.jpg",
+    "esMoneda": false
+  },
+  {
+    "id": 11,
     "valor": 20.0,
     "imagen": "components/dinero/imagenes/20.jpg",
     "esMoneda": false
   },
   {
-    "id": 6,
+    "id": 12,
     "valor": 10.0,
     "imagen": "components/dinero/imagenes/10.jpg",
     "esMoneda": false
   },
   {
-    "id": 7,
+    "id": 13,
     "valor": 10.0,
     "imagen": "components/dinero/imagenes/10n.jpg",
     "esMoneda": false
   },
   {
-    "id": 8,
+    "id": 14,
+    "valor": 10.0,
+    "imagen": "components/dinero/imagenes/10moneda.jpg",
+    "esMoneda": true
+  },
+  {
+    "id": 15,
+    "valor": 5.0,
+    "imagen": "components/dinero/imagenes/5moneda.jpg",
+    "esMoneda": true
+  },
+  {
+    "id": 16,
     "valor": 5.0,
     "imagen": "components/dinero/imagenes/5.jpg",
     "esMoneda": false
   },
   {
-    "id": 9,
+    "id": 17,
     "valor": 5.0,
     "imagen": "components/dinero/imagenes/5n.jpg",
     "esMoneda": false
   },
   {
-    "id": 10,
+    "id": 18,
     "valor": 2.0,
     "imagen": "components/dinero/imagenes/2.jpg",
     "esMoneda": false
   },
   {
-    "id": 11,
+    "id": 19,
     "valor": 2.0,
     "imagen": "components/dinero/imagenes/2pm.jpg",
     "esMoneda": true
   },
   {
-    "id": 12,
+    "id": 20,
+    "valor": 2.0,
+    "imagen": "components/dinero/imagenes/2monedax.jpg",
+    "esMoneda": true
+  },
+  {
+    "id": 21,
     "valor": 1.0,
     "imagen": "components/dinero/imagenes/1pm.jpg",
     "esMoneda": true
   },
   {
-    "id": 13,
+    "id": 22,
+    "valor": 1.0,
+    "imagen": "components/dinero/imagenes/1monedax.jpg",
+    "esMoneda": true
+  },
+  {
+    "id": 23,
     "valor": 0.5,
     "imagen": "components/dinero/imagenes/50cm.jpg",
     "esMoneda": true
   },
   {
-    "id": 14,
+    "id": 24,
     "valor": 0.25,
     "imagen": "components/dinero/imagenes/25cm.jpg",
     "esMoneda": true
   },
   {
-    "id": 15,
+    "id": 25,
     "valor": 0.10,
     "imagen": "components/dinero/imagenes/10cm.jpg",
     "esMoneda": true
   },
   {
-    "id": 16,
+    "id": 26,
     "valor": 0.05,
     "imagen": "components/dinero/imagenes/5cm.jpg",
     "esMoneda": true
