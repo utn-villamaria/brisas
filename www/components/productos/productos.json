@@ -1,117 +1,103 @@
 {
-  "version": 1,
-"productos":[
-  {
-    "id": 1,
-    "nombre": "Pepas",
-    "precio": 26.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/pepas.jpg"
-  },
-  {
-    "id": 2,
-    "nombre": "Materas",
-    "precio": 24.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/materas.jpg"
-  },
-  {
-    "id": 3,
-    "nombre": "Alfajores",
-    "precio": 6.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/alfajores.jpg"
-  },
-  {
-    "id": 4,
-    "nombre": "Paquete alfajor",
-    "precio": 36.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/paquete-alfajor.jpg"
-  },
-  {
-    "id": 5,
-    "nombre": "Palmeritas",
-    "precio": 65.0,
-    "metodoVenta": "P",
-    "imagen": "components/productos/imagenes/palmeritas.jpg"
-  },
-  {
-    "id": 6,
-    "nombre": "Bizcochos",
-    "precio": 40.0,
-    "metodoVenta": "P",
-    "imagen": "components/productos/imagenes/bizcochos.jpg"
-  },
-  {
-    "id": 7,
-    "nombre": "Facturas",
-    "precio": 4.5,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/facturas.jpg"
-  },
-  {
-    "id": 8,
-    "nombre": "Churrinches",
-    "precio": 35.0,
-    "metodoVenta": "P",
-    "imagen": "components/productos/imagenes/churrinches.jpg"
-  },
-  {
-    "id": 9,
-    "nombre": "Roscas",
-    "precio": 36.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/roscas.jpg"
-  },
-  {
-    "id": 10,
-    "nombre": "Pasta Frola Membrillo",
-    "precio": 30.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/pasta-frola-membrillo.jpg"
-  },
-  {
-    "id": 11,
-    "nombre": "Pasta Frola Dulce de Leche",
-    "precio": 35.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/pasta-frola-dulce-leche.jpg"
-  },
-  {
-    "id": 12,
-    "nombre": "Budín",
-    "precio": 30.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/budin.jpg"
-  },
-  {
-    "id": 13,
-    "nombre": "Pan Dulce",
-    "precio": 43.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/pan-dulce.jpg"
-  },
-  {
-    "id": 14,
-    "nombre": "Torta Marmolada",
-    "precio": 38.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/torta-marmolada.jpg"
-  },
-  {
-    "id": 15,
-    "nombre": "Tarta de Coco",
-    "precio": 35.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/torta-coco.jpg"
-  },
-  {
-    "id": 16,
-    "nombre": "Pre Pizzetas",
-    "precio": 15.0,
-    "metodoVenta": "U",
-    "imagen": "components/productos/imagenes/pre-pizzetas.jpg"
-  }
-]
+  "version": 2,
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Pepas",
+      "precio": 60.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/pepas.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Materas",
+      "precio": 54.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/materas.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Alfajores",
+      "precio": 18.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/alfajores.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Paquete alfajor 6",
+      "precio": 108.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/paquete-alfajor.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Palmeritas",
+      "precio": 170.0,
+      "metodoVenta": "P",
+      "imagen": "components/productos/imagenes/palmeritas.png"
+    },
+    {
+      "id": 6,
+      "nombre": "Bizcochos",
+      "precio": 145.0,
+      "metodoVenta": "P",
+      "imagen": "components/productos/imagenes/bizcochos.png"
+    },
+    {
+      "id": 7,
+      "nombre": "Facturas",
+      "precio": 15.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/facturas.png"
+    },
+    {
+      "id": 8,
+      "nombre": "Churrinches",
+      "precio": 160.0,
+      "metodoVenta": "P",
+      "imagen": "components/productos/imagenes/churrinches.png"
+    },
+    {
+      "id": 9,
+      "nombre": "Roscas",
+      "precio": 110.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/roscas.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Pasta Frola Membrillo",
+      "precio": 87.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/pasta-frola-membrillo.png"
+    },
+    {
+      "id": 11,
+      "nombre": "Pasta Frola Dulce de Leche",
+      "precio": 96.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/pasta-frola-dulce.png"
+    },
+    {
+      "id": 12,
+      "nombre": "Pasta Frola Batata",
+      "precio": 96.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/pasta-frola-batata.png"
+    },
+    {
+      "id": 16,
+      "nombre": "Pre Pizzetas",
+      "precio": 45.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/pizzetas.png"
+    },
+    {
+      "id": 4,
+      "nombre": "Paquete alfajor 12",
+      "precio": 200.0,
+      "metodoVenta": "U",
+      "imagen": "components/productos/imagenes/paquete-alfajor-12.jpg"
+    }
+  ]
 }

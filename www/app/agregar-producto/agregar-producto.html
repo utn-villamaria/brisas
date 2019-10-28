@@ -1,0 +1,22 @@
+<ion-header-bar class="bar-positive" align-title="center">
+  <h1 class="title">Agregar Producto</h1>
+</ion-header-bar>
+<ion-view>
+    <ion-content>
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="Nombre del Producto">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Precio">
+        </label>
+        <input type="file" accept="image/*">
+      </div>
+    </ion-content>
+</ion-view>
+<ion-footer-bar class="bar-positive" align-title="center">
+  <h1 class="title"></h1>
+  <div class="buttons">
+    <button class="button boton-grande ion-checkmark-round" ng-click="vm.popupConfirmarCierre()"></button>
+  </div>
+</ion-footer-bar>

@@ -11,6 +11,8 @@
     vm.modificarPrecioProducto = modificarPrecioProducto;
 
     vm.cerrarCaja = cerrarCaja;
+    
+    vm.agregarProducto=agregarProducto;
 
     function vender() {
       $state.go('seleccionar-productos');
@@ -26,6 +28,10 @@
 
     function cerrarCaja() {
       TransicionEstadoProtegido.crearDialogoContrasenia($scope,'cierre-caja');
+    }
+
+    function agregarProducto() {
+      TransicionEstadoProtegido.crearDialogoContrasenia($scope,'agregar-producto');
     }
 
   }

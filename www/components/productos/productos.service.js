@@ -12,7 +12,8 @@
 
     function getProductos() {
       var deferer = $q.defer();
-      $http.get('components/productos/productos.json').then(function(response) {
+     $http.get('components/productos/productos.json').then(function(response) {
+      //$http.get('https://raw.githubusercontent.com/utn-villamaria/brisas/beca-billetes-nuevos/www/components/productos/productos.json').then(function(response) {
         if($localStorage.versionProductos && $localStorage.versionProductos === response.data.version) {
         } else {
           if ($localStorage.productos.length === 0) {
