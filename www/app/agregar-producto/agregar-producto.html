@@ -2,22 +2,38 @@
   <h1 class="title">Agregar Producto</h1>
 </ion-header-bar>
 <ion-view>
-    <ion-content>
-      <div class="list">
+  <ion-content>
+    <br>
+    <div class="row">
+      <div class="col col-40">
         <label class="item item-input">
-          <input type="text" placeholder="Nombre del Producto">
+          <input type="text" ng-model="vm.producto.nombre" placeholder="Nombre del Producto">
         </label>
+        <br>
         <label class="item item-input">
-          <input type="text" placeholder="Precio">
+          <input type="text" ng-model="vm.producto.precio" placeholder="Precio">
         </label>
+        <br>        
+        <ion-checkbox ng-model="vm.vendePorKg" ng-checked="vm.vendePorKg"> Se vende por kilogramo</ion-checkbox>        
+        <br>
         <input id="file-image" type="file" accept="image/*">
+        <br>
+       
+        <button class="button button-positive col col-100" ng-click="vm.agregarNuevoProducto()">Agregar</button>
       </div>
-      <button ng-click="vm.agregarProducto()">Agregar</button>
-    </ion-content>
+      <div class="col col-40 col-offset-5">
+        <div>Vista Previa:</div>
+        <div id="preview"></div>
+      </div>
+    </div>
+
+
+
+  </ion-content>
 </ion-view>
 <ion-footer-bar class="bar-positive" align-title="center">
   <h1 class="title"></h1>
   <div class="buttons">
-    <button class="button boton-grande ion-checkmark-round" ng-click="vm.popupConfirmarCierre()"></button>
+    <button class="button boton-grande ion-checkmark-round" ng-click="vm.irAPrincipal()"></button>
   </div>
 </ion-footer-bar>
