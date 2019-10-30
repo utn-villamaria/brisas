@@ -86,14 +86,14 @@
       "imagen": "components/productos/imagenes/pasta-frola-batata.png"
     },
     {
-      "id": 16,
+      "id": 13,
       "nombre": "Pre Pizzetas",
       "precio": 45.0,
       "metodoVenta": "U",
       "imagen": "components/productos/imagenes/pizzetas.png"
     },
     {
-      "id": 4,
+      "id": 14,
       "nombre": "Paquete alfajor 12",
       "precio": 200.0,
       "metodoVenta": "U",

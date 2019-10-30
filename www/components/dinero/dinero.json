@@ -101,12 +101,7 @@
     "imagen": "components/dinero/imagenes/5n.jpg",
     "esMoneda": false
   },
-  {
-    "id": 18,
-    "valor": 2.0,
-    "imagen": "components/dinero/imagenes/2.jpg",
-    "esMoneda": false
-  },
+  
   {
     "id": 19,
     "valor": 2.0,
@@ -142,18 +137,7 @@
     "valor": 0.25,
     "imagen": "components/dinero/imagenes/25cm.jpg",
     "esMoneda": true
-  },
-  {
-    "id": 25,
-    "valor": 0.10,
-    "imagen": "components/dinero/imagenes/10cm.jpg",
-    "esMoneda": true
-  },
-  {
-    "id": 26,
-    "valor": 0.05,
-    "imagen": "components/dinero/imagenes/5cm.jpg",
-    "esMoneda": true
   }
+ 
  
 ]
