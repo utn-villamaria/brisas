@@ -5,7 +5,7 @@
   <ion-content>
     <br>
     <div class="row">
-      <div class="col col-40">
+      <div class="col col-40" style="border-width: 0.5px;border-style: inset;">
         <label class="item item-input">
           <input type="text" ng-model="vm.producto.nombre" placeholder="Nombre del Producto">
         </label>
@@ -13,22 +13,37 @@
         <label class="item item-input">
           <input type="text" ng-model="vm.producto.precio" placeholder="Precio">
         </label>
-        <br>        
-        <ion-checkbox ng-model="vm.vendePorKg" ng-checked="vm.vendePorKg"> Se vende por kilogramo</ion-checkbox>        
+        <br>
+        <ion-checkbox ng-model="vm.vendePorKg" ng-checked="vm.vendePorKg"> Se vende por kilogramo</ion-checkbox>
         <br>
         <input id="file-image" type="file" accept="image/*">
         <br>
-       
-        <button class="button button-positive col col-100" ng-click="vm.agregarNuevoProducto()">Agregar</button>
+        <div class="col col-offset-5">
+          <div>Vista Previa:</div>
+          <div class="col col-10" id="preview"></div>
+        </div>
+        <br>
+        <button class="button button-positive col col-100" ng-click="vm.agregarNuevoProducto()">{{vm.nombreBotonAgregar()}}</button>
+        <br>
+        <button class="button button-assertive col col-100" ng-click="vm.limpiar()"> Cancelar </button>
       </div>
-      <div class="col col-40 col-offset-5">
-        <div>Vista Previa:</div>
-        <div id="preview"></div>
-      </div>
+
     </div>
-
-
-
+  </ion-content>
+  <ion-content class="col-offset-50 col-50 text-center">
+    <div class="list">
+      <a ng-repeat="p in vm.productos" class="item item-thumbnail-left">
+        <img ng-src="{{p.imagen}}">
+        <h2>{{p.nombre}}</h2>
+        <p>{{vm.stringPrecio(p)}}</p>
+        <button class="button button-royal" ng-click="vm.cargarParaEditar(p);">
+          Editar producto
+        </button>
+        <button class="button button-assertive" ng-click=" vm.mostrarDialogo('eliminar',p);">
+          Eliminar producto
+        </button>
+      </a>
+    </div>
   </ion-content>
 </ion-view>
 <ion-footer-bar class="bar-positive" align-title="center">
