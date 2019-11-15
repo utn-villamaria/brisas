@@ -27,7 +27,7 @@
       } else { vm.producto.metodoVenta = "U" }
       Productos.getProductos().then(function (data) {
         var productos = $localStorage.productos;
-        if(vm.modo=="nuevo"){
+        if (vm.modo == "nuevo") {
           var id = 1;
           if (productos.length && productos.length > 0) {
             console.log(productos[1]);
@@ -35,9 +35,16 @@
             id = productos[ultimoId].id + 1;
           }
           vm.producto.id = id;
-        }       
-        var copy = Object.assign({}, vm.producto);
-        vm.guardarProducto(copy);        
+        }
+        //var copy = Object.assign({}, vm.producto);
+        var copy = {
+          "id": vm.producto.id,
+          "nombre": vm.producto.nombre,
+          "precio": vm.producto.precio,
+          "metodoVenta": vm.producto.metodoVenta,
+          "imagen": vm.producto.imagen
+        };
+        vm.guardarProducto(copy);
         vm.mostrarDialogo(vm.modo, copy);
         vm.limpiar();
       });
@@ -46,18 +53,18 @@
 
     document.getElementById("file-image").onchange = function (e) {
       // Creamos el objeto de la clase FileReader
-      let reader = new FileReader();
+      var reader = new FileReader();
       // Leemos el archivo subido y se lo pasamos a nuestro fileReader
       reader.readAsDataURL(e.target.files[0]);
       // Le decimos que cuando este listo ejecute el código interno
       reader.onload = function () {
-        let preview = document.getElementById('preview');
+        var preview = document.getElementById('preview');
         image = document.createElement('img');
         vm.base64Image = reader.result;
         image.src = reader.result;
         preview.innerHTML = '';
         image.style = " width:200px; height: 200px;"
-        preview.append(image);
+        preview.appendChild(image);
       };
     }
 
@@ -113,7 +120,7 @@
       vm.producto.metodoVenta = "";
       vm.imagen.value = "";
       vm.vendePorKg = false;
-      let preview = document.getElementById('preview');
+      var preview = document.getElementById('preview');
       preview.innerHTML = '';
       vm.modo = "nuevo";
     }
@@ -134,41 +141,50 @@
 
     vm.cargarParaEditar = function (p) {
       vm.limpiar();
-      vm.producto = Object.assign({}, p);
+      vm.producto = {
+        "id": p.id,
+        "nombre": p.nombre,
+        "precio": p.precio,
+        "metodoVenta": p.metodoVenta,
+        "imagen": p.imagen
+      };
       vm.vendePorKg = vm.producto.metodoVenta == "P";
       vm.base64Image = vm.producto.imagen;
-      let preview = document.getElementById('preview');
+      var preview = document.getElementById('preview');
       image = document.createElement('img');
       image.src = vm.producto.imagen
       preview.innerHTML = '';
       image.style = " width:200px; height: 200px;"
-      preview.append(image);      
       vm.modo = "editar";
+      preview.appendChild(image);
+      //preview.append(image);
+
     }
 
-    vm.nombreBotonAgregar=function(){
-      if(vm.modo=="editar"){
+    vm.nombreBotonAgregar = function () {
+      if (vm.modo == "editar") {
         return "Editar";
       }
       return "Agregar";
     }
 
-    vm.guardarProducto=function(p){
-      if(vm.modo=="editar"){
-        vm.productos.forEach(element => {
-            if(element.id==p.id){
-              element.precio=p.precio;
-              element.nombre=p.nombre;
-              element.metodoVenta=p.metodoVenta;
-              element.imagen=p.imagen;
-            }
-        });
-      } 
-      else{
+    vm.guardarProducto = function (p) {
+      if (vm.modo == "editar") {
+        for (var index = 0; index < vm.productos.length; index++) {
+          var element = vm.productos[index];
+          if (element.id == p.id) {
+            element.precio = p.precio;
+            element.nombre = p.nombre;
+            element.metodoVenta = p.metodoVenta;
+            element.imagen = p.imagen;
+          }
+        }
+      }
+      else {
         $localStorage.productos.push(p);
       }
-    
-      
+
+
     }
 
   });

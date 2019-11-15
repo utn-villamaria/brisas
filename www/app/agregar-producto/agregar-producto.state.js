@@ -6,10 +6,7 @@
             url: '/agregar-producto',
             controller: 'AgregarProductoCtrl as vm',
             templateUrl: 'app/agregar-producto/agregar-producto.html',
-            cache: false,
-            resolve: {
-              
-            }
+            cache: false            
         });
     }
 
